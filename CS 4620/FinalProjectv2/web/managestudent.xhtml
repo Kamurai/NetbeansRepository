@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>Final Project</title>
+    </h:head>
+    
+    <h:body>
+
+<!--TOP "Banner" that has a row and three columns where log is in center and Login/Register on right-->
+
+        <div id="top" class="top">
+
+        </div>
+
+<!--NAVBAR: change selections based certain page...can change links-->
+          <div id="content" class="navbar">
+              <h:form>
+               <div id="navbar">
+                    <ul>
+                         <li><h:commandLink action="index" value="Home" styleClass="currentpage" style="color: #C0E357"/></li>
+                         <li id="spacers">|</li>
+                         <li><h:commandLink action="viewstudent" value="View Students"/></li>
+                         <li id="spacers">|</li>
+                         <li><h:commandLink action="managestudent" value="Manage Students"/></li>
+                    </ul>
+               </div>
+              </h:form>
+          </div>
+        
+
+<!--MAIN content WILL BE CHANGED PER SITE page-->
+        <div id="content" class="center_content">                  
+               <h:form>
+                   <table width="100%" cellspacing="2px" cellpadding="2px" align="center" class="inventory-table">
+                        <tr>
+                            <th><h:outputText value="Student ID" /></th>
+                            <th><h:outputText value="Student Name" /></th>
+                            <th><h:outputText value="Career Interests" /></th>
+                        </tr>
+
+                            
+                        <c:forEach var="x" begin="0" end="#{ManageStudentController.getSizeofStudents()-1}" step="1" varStatus ="amount">
+                            <tr>
+                                <td class="inventory-table-cell"><h:outputText value="#{ManageStudentController.getLocalStudent(x).getId()}" /></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ManageStudentController.getLocalStudent(x).getName()}" /></td>
+                                <td class="inventory-table-cell"><h:inputText value="#{ManageStudentController.getLocalStudent(x).getProfile().getInterests().interests[0]}" /></td>
+
+                                <td class="inventory-table-cell"></td>
+                            </tr>
+
+                            
+                            <c:forEach var="y" begin="1" end="#{ManageStudentController.getSizeofStudentCI(ManageStudentController.getLocalStudent(x))-1}" step="1" varStatus ="amount">
+                                <tr>
+                                    <td class="inventory-table-cell"></td>
+                                    <td class="inventory-table-cell"></td>
+                                    <td class="inventory-table-cell"><h:inputText value="#{ManageStudentController.getLocalStudent(x).getProfile().getInterests().interests[y]}" /></td>
+                                    <td class="inventory-table-cell"></td>
+                                </tr>
+                            </c:forEach>
+
+                            <tr>
+                                <td class="inventory-table-cell"></td>
+                                <td class="inventory-table-cell"></td>
+                                <!-- "" causes an error -->
+                                <!-- Solution: have the "update career interest" method return blank if y is above career interest list size -->
+                                <!--<td class="inventory-table-cell"></td>-->
+                                <!--The following line needs to get a student name from whatever student name collection base on "x"-->
+                                <td class="inventory-table-cell"><h:inputText value="#{ManageStudentController.localupdates[x]}" /></td>
+                                <!--Then pass that name into the controller's getstudent(studentname)-->
+                                <!--Then pass that student into the controller's savestudent(student)-->
+                                <td class="inventory-table-cell"><h:commandButton  value ="Update Career Interests" action="#{ManageStudentController.saveStudent(ManageStudentController.getLocalStudent(x))}"/></td>
+                            </tr>
+                            
+                        </c:forEach>
+                        
+                    </table>
+                    <!--<h:outputLabel id="label1" value="Enter the first number: "/><br/>-->
+                </h:form>
+        </div>
+
+
+
+<!--FOOTER wil NOT change from page to page-->
+        <div id="bottom">
+            <h:form>
+                 <div id="navbar">
+                    <ul>
+                         <li style="color: #DBFEEA; font-weight: bold">CS 4620, Final Project: Chris Kemerait</li>
+                    </ul>
+               </div>
+                </h:form>
+        </div>
+    </h:body>
+</html>

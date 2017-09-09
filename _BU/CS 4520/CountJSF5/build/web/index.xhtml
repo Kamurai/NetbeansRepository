@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Count JSF5</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>
+                <!--This starts the GUI section-->
+                <h:outputLabel id="label1" value="Please enter your name: "/>
+                <h:inputText id="input1" maxlength="20" value="#{NameBean.name}" required="true"/>
+                <h:message showSummary="true" showDetail="false"
+                           style="color: red; font-family: serif;
+                           font-style: oblique"
+                           id ="errors1" for="name"/>
+                <br/>
+                <br/>
+                <h:commandButton id="command1" value="Execute" action="#{CountBean.upCount}"/>
+                
+            </p>
+
+            <p>
+                <h:outputText id="display" value ="#{NameBean.name}"/><br/>
+                <!--This ends the GUI section-->
+            </p>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>Sally Shop</title>
+    </h:head>
+    
+    <h:body>
+        
+<!--TOP "Banner" that has a row and three columns where log is in center and Login/Register on right-->
+        
+        <div id="top" class="top">
+            <h:form>
+          <table width="100%" border="0" cellspacing="2px" cellpadding="1px">
+               <tr>
+                    <td width="259" valign="bottom" align="left"></td>
+                    <td rowspan="1" width="413" align="center">
+                         <h:graphicImage styleClass="logo" height="185" width="134" value="images/logo2.png"/></td>
+                    <c:choose>
+            <c:when test="${ShopBean.lb.isLoginGood() == true}">
+                    <td width="259" valign="top" align="right"><h:commandLink action="#{ShopBean.logout()}" value="Logout"
+                        styleClass="login-button" style="color: #333; text-decoration: none"/></td>
+            </c:when>
+
+            <c:otherwise id="errormessage" >
+                 <td width="259" valign="top" align="right"><h:commandLink action="login" value="Login/Register"
+                        styleClass="login-button" style="color: #333; text-decoration: none"/></td>
+            </c:otherwise>
+                    </c:choose>
+               </tr>
+          </table>
+            </h:form>
+        </div>
+         
+<!--NAVBAR: change selections based certain page...can change links-->
+          <div id="content" class="navbar">
+              <h:form>
+               <div id="navbar">
+                    <ul>
+                         <li><h:commandLink action="index" value="Home" /></li>
+                         <li id="spacers">|</li>
+                         <li><h:commandLink action="inventory" value="Inventory" styleClass="currentpage" style="color: #C0E357"/></li>
+                         <li id="spacers">|</li>
+                         <li><h:commandLink action="aboutus" value="About Us"/></li>
+                         <li id="spacers">|</li>
+                         <li><h:commandLink action="login" value="Login"/></li>
+                    </ul>
+               </div>
+              </h:form>
+          </div>
+        
+
+<!--MAIN content WILL BE CHANGED PER SITE page-->
+        <div id="content" class="center_content">
+
+            <c:choose>
+            <c:when test="${ShopBean.lb.loginHandler().compareTo('inventory') == 0}">
+               
+                <h:form>
+
+                    <table width="700px" cellspacing="2px" cellpadding="2px" align="center" class="inventory-table">
+                        <tr>
+                            <th><h:outputText value="Image" /></th>
+                            <th><h:outputText value="Products" /></th>
+                            <th><h:outputText value="Description" /></th>
+                            <th><h:outputText value="Prices" /></th>
+                            <th><h:outputText value="Inventory" /></th>
+                            <th><h:outputText value="Request" /></th>
+                            <th><h:outputText value="SubTotal" /></th>
+                        </tr>
+
+                        <c:forEach var="x" begin="0" end="#{ShopBean.ib.size-1}" step="1" varStatus ="amount">
+                            <c:if test="${ShopBean.ib.info[x].amount > 0}">
+
+                            <tr>
+                                <td width="100px" class="inventory-table-cell"><img alt="Pet" src="#{ShopBean.ib.info[x].picture}" width="100" height="100"/></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].name}" /></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].description}" /></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].price}" /></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].inventory}" /></td>
+                                <td class="inventory-table-cell" width="50px"><h:inputText style=" width: 50px; text-align: center" value="#{ShopBean.ib.info[x].amount}" /></td>
+                                <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].subtotal}" /></td>
+                            </tr>
+                                 </c:if>
+                        </c:forEach>
+
+                        <tr>
+                            <td align="left"><h:commandButton id ="goback" value = "Keep Shopping" action="inventory"/></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td align="right"><h:commandButton id ="total" value ="Update" action="#{ShopBean.ib.total}"/></td>
+                            <td align="left"><h:commandButton id ="checkout" value ="Checkout" action="#{ShopBean.checkout()}"/></td>
+                            <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.getTotal()}" /></td>
+                        </tr>
+                    </table>
+                </h:form>
+
+            </c:when>
+
+            <c:otherwise id="errormessage" >
+            
+
+        <!-- this tage starts the form, gives the -->
+        <!-- method of sending infromation and the -->
+        <!-- location of form script -->
+        <h:form>
+
+            <table width="700px" cellspacing="2px" cellpadding="2px" align="center" class="inventory-table">
+                <tr>
+                    <th><h:outputText value="Image" /></th>
+                    <th><h:outputText value="Products" /></th>
+                    <th><h:outputText value="Description" /></th>
+                    <th><h:outputText value="Prices" /></th>
+                    <th><h:outputText value="Inventory" /></th>
+                </tr>
+
+                <c:forEach var="x" begin="0" end="#{ShopBean.ib.size-1}" step="1" varStatus ="amount">
+                    <c:if test="${ShopBean.ib.info[x].inventory > 0}">
+                    <tr >
+                        <td class="inventory-table-cell" width="100px"><img alt="Pet" src="#{ShopBean.ib.info[x].picture}" width="100" height="100"/></td>
+                        <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].name}" /></td>
+                        <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].description}" /></td>
+                        <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].price}" /></td>
+                        <td class="inventory-table-cell"><h:outputText value="#{ShopBean.ib.info[x].inventory}" /></td>
+                    </tr>
+                    </c:if>
+                </c:forEach>
+            </table>
+
+         </h:form>
+            </c:otherwise>
+        </c:choose>
+
+        </div>
+
+<!--FOOTER wil NOT change from page to page-->
+        <div id="bottom">
+            <h:form>
+                 <div id="navbar">
+                    <ul>
+                         <li style="color: #DBFEEA; font-weight: bold">2010 © The Sally Shop, LLC.  All Rights Reserved. </li>
+                         <li id="spacers" style="">|</li>
+                         <li><h:commandLink action="aboutus" value="About Us"/></li>
+                         <li id="spacers">|</li>
+                         <li><a href="#">Terms</a></li>
+                         <li id="spacers">|</li>
+                         <li><a href="http://www.nwf.org/">National Wildlife Federation</a></li>
+                    </ul>
+               </div>
+        </h:form>
+        </div>
+       
+    </h:body>
+</html>
