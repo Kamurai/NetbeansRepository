@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--Kemerait, Christopher-->
+<!--CS 4520, Professor Xu-->
+<!--Lab 2:  Small Shop-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>Lab 2</title>
+        <h1>Small Shop</h1>
+    </h:head>
+    <link rel="stylesheet" type="text/css" href="shopcss.css" />
+
+    <h:body styleClass = "pagebackground">
+
+        
+
+
+        <p>Please input the amounts of computers, USB drives and computer mice desired.</p>
+
+        <!-- this tage starts the form, gives the -->
+        <!-- method of sending infromation and the -->
+        <!-- location of form script -->
+        <h:form>
+            <h:dataTable styleClass="tablebackground" value="#{ShopBean.info}" var="item" first="0" rows="#{ShopBean.size+1}" border="10" cellpadding="5" cellspacing="3" width="50%" dir="LTR" frame="hsides" rules="all" >
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Products" /></f:facet>
+                    <h:outputText value="#{item.name}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Price" /></f:facet>
+                    <h:outputText value="#{item.price}" />
+                    <f:facet name="footer"><h:commandButton id ="clear" value ="Clear" action="#{ShopBean.clearall}" /></f:facet>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Amount Desired" /></f:facet>
+                    <h:inputText value="#{item.amount}" />
+                    <f:facet name="footer"><h:commandButton id ="endshopping" value ="End Shopping" action="#{ShopBean.total}"/></f:facet>
+                </h:column>
+                
+            </h:dataTable>
+
+
+            <!--<h:outputLabel id="label1" value="Enter the first number: "/><br/>-->
+            
+            
+    </h:form>
+    </h:body>
+</html>

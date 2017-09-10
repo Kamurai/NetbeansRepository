@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Project Guess Word</title>
+    </h:head>
+    <link rel="stylesheet" type="text/css" href="guessWord.css" />
+    <h:body>
+        <h:form>
+            <p>
+                <!--This starts the GUI section-->
+                <h:outputLabel id="label1" value="#{WordBean.current}"/><br/>
+                <h:outputLabel id="label2" styleClass="actualWordStyle" value="You will need to guess the above word."/><br/>
+                <h:inputText id="input1" styleClass="currentWordStyle" maxlength="20" value="#{WordBean.guess}" required="true"/>
+                <h:message showSummary="true" showDetail="false"
+                           style="color: red; font-family: serif;
+                           font-style: oblique"
+                           id ="errors1" for="name"/>
+                <br/>
+                <br/>
+                <h:commandButton id="command1" value="Guess!" action="#{WordBean.evaluate}"/>
+
+
+
+            </p>
+            <!--This ends the GUI section-->
+        </h:form>
+    </h:body>
+</html>

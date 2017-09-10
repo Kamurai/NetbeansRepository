@@ -1,0 +1,157 @@
+Create Table CustomerInfo(
+	customerid INTEGER PRIMARY KEY,
+	firstname varchar(20) NOT NULL,
+	lastname varchar(20) NOT NULL,
+	email varchar(40) NOT NULL
+	
+);
+
+INSERT INTO CustomerInfo (customerid, firstname, lastname, email) VALUES
+    (1, 'Masom', 'Hamadeh', 'Masom@Hamadeh.com'),
+    (2, 'Chris', 'Kemerait', 'Chris@Kemerait.com'),
+    (3, 'Chongwei', 'Xu', 'Chongwei@Xu.com')
+    ;
+
+Create Table Usernames(
+	loginid INTEGER PRIMARY KEY,
+	customerid INTEGER,
+	username varchar(20) NOT NULL,
+	password varchar(20) NOT NULL,
+	manager integer NOT NULL
+);
+
+INSERT INTO Usernames (loginid, customerid, username, password, manager) VALUES
+    (1, 1, 'BigMase', 'masom', 1),
+    (2, 1, 'LittleMase', 'masom', 0),
+    (3, 2, 'Kamurai', 'chris', 1),
+    (4, 2, 'Kami', 'chris', 0),
+    (5, 3, 'xu', 'chongwei', 0),
+    (6, 3, 'drxu', 'chongwei', 1)
+    ;
+
+
+Create Table TableNames(
+	tablid integer primary key,
+	tablename varchar(20) NOT NULL
+	
+);
+
+
+INSERT INTO TableNames (tablid, tablename) VALUES
+    (1, 'SALAMANDERS'),
+    (2, 'NEWTS'),
+    (3, 'AQUATICS')
+    ;
+
+
+
+
+Create Table Newts(
+	productid INTEGER PRIMARY KEY,
+      	productname VARCHAR (40) NOT NULL,
+      	productprice DOUBLE NOT NULL,
+	inventory INTEGER,
+	picture VARCHAR (100) NOT NULL,
+	description VARCHAR (1000)
+);
+
+Create Table Salamanders(
+	productid INTEGER PRIMARY KEY,
+      	productname VARCHAR (40) NOT NULL,
+      	productprice DOUBLE NOT NULL,
+	inventory INTEGER,
+	picture VARCHAR (100) NOT NULL,
+	description VARCHAR (1000)
+);
+
+Create Table Aquatics(
+	productid INTEGER PRIMARY KEY,
+      	productname VARCHAR (40) NOT NULL,
+      	productprice DOUBLE NOT NULL,
+	inventory INTEGER,
+	picture VARCHAR (100) NOT NULL,
+	description VARCHAR (1000)
+);
+
+INSERT INTO Salamanders (productid, productname, productprice, inventory, picture, description) VALUES
+    (1, 'Fire Salamander', 20.00, 5, 'images/fire_salamander.jpg', 'Terrestial amphibian native to Europe.  May grow to about 8 inches.  Noted by red-orange-yellow spots.'),
+    (2, 'Marbled Salamander', 5.00, 10, 'images/marbled_salamander.jpg', 'Burrowing terrestial amphibian native to N. America.  May grow to about 6 inches.  Noted by various white or grey markings.'),
+    (3, 'Spotted Salamander', 30.00, 5, 'images/spotted_salamander.jpg', 'Burrowing terrestial amphibian native to N. America.  May grow to about 10 inches.  Noted by yellow spots or stripes.'),
+    (4, 'Tiger Salamander', 25.00, 3, 'images/tiger_salamander.jpg', 'Burrowing terrestial amphibian native to N. America.  May grow to about 14 inches.  Noted by "buggy" eyes and various yellow or green markings.'),
+    (5, 'Blue Spotted Salamander', 15.00, 4, 'images/blue_spotted_salamander.jpg', 'Burrowing terrestial amphibian native to N. America.  May grow to about 6 inches.  Noted by various blue spots.'),
+    (6, 'Pacific Giant Salamander', 15.00, 7, 'images/pacific_giant_salamander.jpg', 'Burrowing terrestial amphibian native to N. America.  May grow to about 12 inches.  Noted by various brown markings.'),
+    (7, 'Mud Salamander', 25.00, 3, 'images/mud_salamander.jpg', 'Semi-aquatic lungless salamander native to N. America.  May grow to about 8 inches.  Note by a red body with black spots.')
+    ;
+
+INSERT INTO Newts (productid, productname, productprice, inventory, picture, description) VALUES
+    (1, 'Fire Belly Newt', 10.00, 10, 'images/fire_belly_newt.jpg', 'Semi-aquatic amphibian native to E. Asia.  Pending breed, may grow to about 6 inches.  Noted by black or dark brown body with red markings along the belly.'),
+    (2, 'Paddle Tail Newt', 20.00, 5, 'images/paddle_tail_newt.jpg', 'Semi-aquatic amphibian native to E. Asia.  May grow to about 9 inches.  Noted by brown body, slightly receded eyes and red markings along the belly.'),
+    (3, 'Mandarin Newt', 30.00, 5, 'images/mandarin_newt.jpg', 'Semi-aquatic amphibian native to E. Asia.  May grow to about 8 inches.  Noted by black body with orange markings along the top of head and body.'),
+    (4, 'Italian Crested Newt', 25.00, 3, 'images/italian_crested_newt.jpg', 'Semi-aquatic amphibian native to Europe.  May grow to about 6 inches.  Noted by a spotted brownish body with either a fin or yellow stripe along its spine.'),
+    (5, 'Alpine Newt', 15.00, 4, 'images/alpine_newt.jpg', 'Semi-aquatic amphibian native to Europe.  May grow to just over 4 inches.  Noted by a bluish body, orange belly, white and black markings on head, sides, and shallow dorsal fin.'),
+    (6, 'Great Crested Newt', 15.00, 7, 'images/great_crested_newt.jpg', 'Semi-aquatic amphibian native to Europe.  May grow to just over 6 inches.  Noted by a spotted greyish body with either a fin or orange stripe along its spine.'),
+    (7, 'Sharp Ribbed Newt', 25.00, 3, 'images/sharp_ribbed_newt.jpg', 'Semi-aquatic amphibian native to W. Europe.  May grow to about 12 inches.  Noted by brownish-greyish body, with a lighter orangish-brownish belly, spots throughout.'),
+    (8, 'Pygmy Marbled Newt', 40.00, 2, 'images/pygmy_marbled_newt.jpg', 'Semi-aquatic amphibian native to W. Europe.  May grow to about 6 inches.  Noted by a green body with various black markings and an orangish stripe along the spine.'),
+    (9, 'Peninsula Newt', 30.00, 8, 'images/peninsula_newt.jpg', 'Semi-aquatic amphibian native to N. America.  May grow to about 5 inches.  Noted by a tan to green body with possible black or red spots.'),
+    (10, 'Red-Spotted Newt', 30.00, 12, 'images/red_spotted_newt.jpeg', 'Semi-aquatic amphibian native to N. Ameria.  May grow to about 6 inches.  Noted by either a red or green body with red spots along the sides.'),
+    (11, 'Black-Spotted Newt', 30.00, 8, 'images/black_spotted_newt.jpg', 'Semi-aquatic amphibian native to N. Ameria.  May grow to about 6 inches.  Noted by a green body with black spots all about.'),
+    (12, 'Red-Bellied Newt', 30.00, 6, 'images/red_belly_newt.jpeg', 'Semi-aquatic amphibian native to N. America.  May grow to about 7 inches.  Noted by a dark brown to black top and tomato red belly.'),
+    (13, 'California Newt', 30.00, 6, 'images/california_newt.jpg', 'Semi-aquatic amphibian native to N. Ameica.  May grow to about 8 inches.  Noted by a green top and orange belly.'),
+    (14, 'Harlequin Newt', 50.00, 3, 'images/harlequin_newt.jpg', 'Semi-aquatic amphibian native to the Middle East.  May grow to about 6 inchs.  Noted by various marking of white, black and orange throughout the head, body and tail.')
+    ;
+
+
+
+INSERT INTO Aquatics (productid, productname, productprice, inventory, picture, description) VALUES
+    (1, 'Axolotl', 25.00, 10, 'images/axolotl.jpg', 'Fully aquatic amphibian native to Mexico.  May grow to about 12 inches.  Noted by reddish external gills, slightly buggy eyes, and extended fins on the tail.'),
+    (2, 'Water Dog', 20.00, 10, 'images/water_dog.jpg', 'Fully aquatic amphibian native to N. America.  May grow to about 12 inches.  Noted by reddish external gills, slightly receded eyes, and a large flat tail.' ),
+    (3, 'Siren', 35.00, 5, 'images/siren.jpg', 'Fully aquatic amphibian native to N. America.  Pending breed, may grow to about 38 inches.  Noted by a long body ending with a large, vertically, flat section, small forelegs, no hindlegs, and small reddish external gills.'),
+    (4, 'Hellbender', 100.00, 3, 'images/hellbender.jpeg', 'Fully aquatic amphibian native to N. America.  May grow to about 30 inches.  Noted by a long flat body with receded eyes and skin flaps along the sides and tail.' )
+    ;
+
+
+Create Table Records(
+	recordid INTEGER PRIMARY KEY,
+      	
+	username VARCHAR (20) NOT NULL,
+      	email VARCHAR (20) NOT NULL,
+      	
+	rfname VARCHAR (20) NOT NULL,
+      	rlname VARCHAR (20) NOT NULL,
+      	rstreet VARCHAR (20) NOT NULL,
+      	rcity VARCHAR (20) NOT NULL,
+      	rstate VARCHAR (20) NOT NULL,
+      	rcountry VARCHAR (20) NOT NULL,
+      	rpcode VARCHAR (20) NOT NULL,
+      	rphone VARCHAR (20) NOT NULL,
+      	
+	bfname VARCHAR (20) NOT NULL,
+      	blname VARCHAR (20) NOT NULL,
+      	bstreet VARCHAR (20) NOT NULL,
+      	bcity VARCHAR (20) NOT NULL,
+      	bstate VARCHAR (20) NOT NULL,
+      	bcountry VARCHAR (20) NOT NULL,
+      	bpcode VARCHAR (20) NOT NULL,
+      	bphone VARCHAR (20) NOT NULL,
+      	
+	cctype VARCHAR (20) NOT NULL,
+      	ccnumber VARCHAR (20) NOT NULL,
+      	ccexp VARCHAR (20) NOT NULL,
+      	cccode VARCHAR (20) NOT NULL,
+      	
+	dop VARCHAR (20) NOT NULL,
+	total VARCHAR (20) NOT NULL
+      	
+);
+
+Create Table Purchases(
+	purchaseid INTEGER PRIMARY KEY,
+	recordid INTEGER NOT NULL,      	
+
+	productname VARCHAR (40) NOT NULL,
+      	productprice DOUBLE NOT NULL,
+	productamount INTEGER NOT NULL,
+	productsubtotal DOUBLE NOT NULL,
+	description VARCHAR (1000)
+      	
+);

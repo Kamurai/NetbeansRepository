@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <link href='#{MainBean.GetPath()}Pictures/favicon.ico' rel='shortcut icon' type='image/x-icon' />
+        <link href='#{MainBean.GetPath()}Pictures/favicon.ico' rel='icon'          type='image/x-icon' />
+        <link href='#{MainBean.GetStylePath()}Section3.css'    rel='stylesheet'    type='text/css' />
+    </h:head>
+    <h:body id="idBody">
+    <font color="white">
+        <table id="idTableMain">
+            <tr id="idHeaderRow">
+                <td id="idHeaderRowCenter" colspan="3">
+                    <h:form>
+                        <ui:include src="#{Bean3.GetPath()}Common/Logo.xhtml"></ui:include>
+                    </h:form>
+                </td>
+            </tr>
+            <tr id="idNavigationRow">
+                <td id="idNavigationBar" colspan="3">
+                    <h:form>
+                        <ui:include src="#{Bean3.GetPath()}Common/NavBar.xhtml"></ui:include>
+                    </h:form>
+                </td>
+            </tr>
+            <tr id="idCenterRow">
+                <td id="idCenterRowLeft">
+                    <h4>
+                        Navigation
+                    </h4>
+                    <h:form>
+                        <ui:include src="#{Bean3.GetPath()}Section3/Navigation.xhtml"></ui:include>
+                    </h:form>
+                </td>
+                <td id="idCenterRowMain">
+                    <h:form>
+                        <ui:include src="#{Bean3.Content()}"></ui:include>
+                    </h:form>
+                </td>
+                <td id="idCenterRowRight">
+                     <h4>
+                         Information
+                     </h4>
+                     <h:form>
+                         <ui:include src="#{MainBean.Versions()}"></ui:include>
+                     </h:form>
+                 </td>
+            </tr>
+            <tr id="idFooterRow">
+                <td id="idFooterMain" colspan="3">
+                    <h:form>
+                        <ui:include src="#{Bean3.GetPath()}Common/Footer.xhtml"></ui:include>
+                    </h:form>
+                </td>
+            </tr>
+        </table>
+    </font>    
+    </h:body>
+</html>
+
