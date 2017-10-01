@@ -96,17 +96,22 @@ public class Custom extends Section2.Section5.Custom
         String Result = "";
         if(input == 0)
         {
-            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section3/index.html\">HTML</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section3/index.php\">PHP</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section2/Section3/index.html\">HTML Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section2/Section3/index.asp\">ASP Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section2/Section3/index.aspx\">ASP.NET Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section3/index.shtml\">Perl</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:8080/JSFApplication/Section2/Section3/index.xhtml\">JSF</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/WebApplication/Section2/Section3/index.cshtml\">ASP.NET Web App</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section2/Section3/index.aspx\">ASP.NET Webform</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/MVC/Section2/Section3/index\">ASP.NET MVC App</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/SSI/Section2/Section3/index.html\">Apache SSI</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section5/Section3/index.html\">HTML</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section5/Section3/index.php\">PHP</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section2/Section5/Section3/index.html\">HTML Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section2/Section5/Section3/index.html\">JQuery</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section2/Section5/Section3/index.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section2/Section5/Section3/index.aspx\">ASP.NET Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section2/Section5/Section3/index.aspx\">ASP.NET Webform</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:84/Section2/Section5/Section3/index\">Node JS</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Section2/Section5/Section3/index.shtml\">Perl</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:8080/JSFApplication/Section2/Section5/Section3/index.xhtml\">JSF</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebApplication/Section2/Section5/Section3/index.cshtml\">ASP.NET Web App</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section2/Section5/Section3/index.aspx\">ASP.NET Webform</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/MVC/Section2/Section5/Section3/index\">ASP.NET MVC App</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/SSI/Section2/Section5/Section3/index.html\">Apache SSI</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:82/Section2/Section5/Section3/index\">Python Web.py</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:83/Section2/Section5/Section3/index\">Ruby on Rails</a><br/>";
         }
         return Result;
     }
