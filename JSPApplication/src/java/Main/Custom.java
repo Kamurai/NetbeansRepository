@@ -12,9 +12,9 @@ public class Custom
     public String Navigation(int level, int extension)
     {
         String Result = "";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"AboutUs"+bob.GetExtension(extension)+"'>About Us</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Media"+bob.GetExtension(extension)+"'>Media</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Minecraft"+bob.GetExtension(extension)+"'>Minecraft!</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"AboutUs.jsp'>About Us</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Media.jsp'>Media</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Minecraft.jsp'>Minecraft!</a><br/><br/>";
         return Result;
     }
 
@@ -179,22 +179,22 @@ public class Custom
         String Result = "";
         if(input == 0)
         {
-            Result += "<a href=\"http://htkb.dyndns.org/index.html\">HTML</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/index.php\">PHP</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/Javascript/index.html\">HTML Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/JQuery/index.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/index.asp\">ASP Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/index.aspx\">ASP.NET Javascript</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/index.aspx\">ASP.NET Webform</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:84/index\">Node JS</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/index.shtml\">Perl</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:8080/JSFApplication/index.xhtml\">JSF</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/WebApplication/index.cshtml\">ASP.NET Web App</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/index.aspx\">ASP.NET Webform</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/MVC/index\">ASP.NET MVC App</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org/SSI/index.html\">Apache SSI</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:82/index\">Python Web.py</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:83/index\">Ruby on Rails</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Index.html\">HTML</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Index.php\">PHP</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Javascript/Index.html\">HTML Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/JQuery/Index.html\">JQuery</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Index.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Index.aspx\">ASP.NET Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Index.aspx\">ASP.NET Webform</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:84/Index\">Node JS</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/Index.shtml\">Perl</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:8080/JSFApplication/Index.xhtml\">JSF</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebApplication/Index.cshtml\">ASP.NET Web App</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Index.aspx\">ASP.NET Webform</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/MVC/Index\">ASP.NET MVC App</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org/SSI/Index.html\">Apache SSI</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:82/Index\">Python Web.py</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:83/Index\">Ruby on Rails</a><br/>";
         }
         else if(input == 1)
         {

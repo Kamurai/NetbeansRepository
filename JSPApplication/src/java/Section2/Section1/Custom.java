@@ -14,24 +14,23 @@ public class Custom extends Section2.Custom
     public String Navigation(int level, int extension)
     {
         String Result = "";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section1/Section2/Section1/Project1"+bob.GetExtension(extension)+"'>Gynowars</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section1/Section2/Section1/Project1.jsp'>Gynowars</a><br/><br/>";
             Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section2/Section1/Project1.html'>Gynowars RPG</a><br/><br/>";
             Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section2/Section1/Project2.html'>Gynowars: Battle Arena CCG</a><br/><br/>";
             Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section2/Section1/Project3.html'>Gynowars: Crash Ball</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project2"+bob.GetExtension(extension)+"'>Assault</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project3"+bob.GetExtension(extension)+"'>Mars</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section4/Section2/Section1/Project1"+bob.GetExtension(extension)+"'>Renley</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section5/Section2/Section1/Project1"+bob.GetExtension(extension)+"'>Antarrea</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section6/Section2/Section1/Project1"+bob.GetExtension(extension)+"'>Editations</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project7/Section2/Section1/Project1"+bob.GetExtension(extension)+"'>Truth</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project8"+bob.GetExtension(extension)+"'>Kingdoms</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project9"+bob.GetExtension(extension)+"'>Terminal World</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project10"+bob.GetExtension(extension)+"'>Monster Office Workplace</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project11"+bob.GetExtension(extension)+"'>Battle Princesses</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project12"+bob.GetExtension(extension)+"'>Sacred Offerings</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project13"+bob.GetExtension(extension)+"'>The Way</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project14"+bob.GetExtension(extension)+"'>Conspiratorium</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project15"+bob.GetExtension(extension)+"'>Conversion</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project2.jsp'>Assault</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project3.jsp'>Mars</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section4/Section2/Section1/Project1.jsp'>Renley</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Section5/Section2/Section1/Project1.jsp'>Antarrea</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project6.jsp'>Truth</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project7.jsp'>Kingdoms</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project8.jsp'>Terminal World</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project10.jsp'>Battle Princesses</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project12.jsp'>The Way</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project13.jsp'>Conspiratorium</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section2/Project14.jsp'>Conversion</a><br/><br/>";
         return Result;
     }
 

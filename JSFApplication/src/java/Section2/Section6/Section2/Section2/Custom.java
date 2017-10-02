@@ -16,7 +16,7 @@ public class Custom extends Main.Custom
         String Result = "";
         if(input <= 0)
         {
-            Result += "./Content/Content_index.xhtml";
+            Result += "./Content/Content_Index.xhtml";
         }
         else if(input == 1)
         {
@@ -74,7 +74,7 @@ public class Custom extends Main.Custom
         
         if(input <= 0)
         {
-            Result += "./Content/Versions_index.xhtml";
+            Result += "./Content/Versions_Index.xhtml";
         }
         else if(input == 1)
         {
