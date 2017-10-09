@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Main.Universal" %>
 <%@page import="Section2.Layout" %>
-<%@page import="Section2.Section5.Section2.Custom" %>
+<%@page import="Section2.Custom" %>
 <!DOCTYPE HTML>
 
 <html>
@@ -10,15 +10,16 @@
             Universal uni = new Universal();
             Custom cust = new Custom();
             Layout lay = new Layout(cust);
-            int vLevel = 3;
-            int vPage = 0;
-            
-            out.println(uni.WriteHeader(vLevel, 2));
+            int level = 1;
+            int pagenumber = 6;
+            int extension = 3;
+
+            out.println(uni.WriteHeader(level, 2));
         %>
     </head>
     <body>
         <%
-            out.println(lay.WriteWebpage(vPage, vLevel));
+            out.println(lay.WriteWebpage(pagenumber,level,extension));
         %>
     </body>
 </html>

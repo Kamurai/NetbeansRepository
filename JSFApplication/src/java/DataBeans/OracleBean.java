@@ -35,7 +35,7 @@ public class OracleBean
         driver = "oracle.jdbc.driver.OracleDriver";
         url = "jdbc:oracle:thin:@localhost:1521:xe";
         dbName = "Test";
-        dbUsername = "kamurai";
+        dbUsername = "Kamurai";
         dbPassword = "yellow23";
         connect = null;
 
@@ -65,7 +65,7 @@ public class OracleBean
             sqlStatement += "color ";
         }
 
-        sqlStatement += "from test where ";        
+        sqlStatement += "from OracleTests where ";        
         
         if(col <= 0)
         {

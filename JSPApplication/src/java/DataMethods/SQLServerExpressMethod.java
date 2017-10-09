@@ -51,7 +51,7 @@ public class SQLServerExpressMethod
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "Indext ";
         }
         else
         {
@@ -62,7 +62,7 @@ public class SQLServerExpressMethod
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "Indext ";
             sqlStatement += "= " + rowID;
         }
         else

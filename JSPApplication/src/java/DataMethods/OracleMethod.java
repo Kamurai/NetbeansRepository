@@ -53,7 +53,7 @@ public class OracleMethod
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "Indext ";
         }
         else
         {
@@ -64,7 +64,7 @@ public class OracleMethod
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "Indext ";
         }
         else
         {

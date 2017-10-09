@@ -7,34 +7,34 @@ public class Universal
 
     }
 
-    public String WriteHeader(int level, int section)
+    public String WriteHeader(int vLevel, int vSection)
     {
         String Result = "";
-        Result += "<link rel='shortcut icon' href='"+GetPath(level)+"Pictures/favicon.ico' type='image/x-icon' />";
-        Result += "<link rel='icon' href='"+GetPath(level)+"Pictures/favicon.ico' type='image/x-icon' />";
-        if(section == 1)
+        Result += "<link rel='shortcut icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        Result += "<link rel='icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        if(vSection == 1)
         {
-            Result += "<link href='"+GetPath(level-1)+"Section1.css' rel='stylesheet' type='text/css'>";
+            Result += "<link href='"+GetPath(vLevel-1)+"Section1.css' rel='stylesheet' type='text/css'>";
         }
-        else if(section == 2)
+        else if(vSection == 2)
         {
-            Result += "<link href='"+GetPath(level-1)+"Section2.css' rel='stylesheet' type='text/css'>";
+            Result += "<link href='"+GetPath(vLevel-1)+"Section2.css' rel='stylesheet' type='text/css'>";
         }
-        else if(section == 3)
+        else if(vSection == 3)
         {
-            Result += "<link href='"+GetPath(level-1)+"Section3.css' rel='stylesheet' type='text/css'>";
+            Result += "<link href='"+GetPath(vLevel-1)+"Section3.css' rel='stylesheet' type='text/css'>";
         }
         else
         {
-            Result += "<link href='"+GetPath(level-1)+"Main.css' rel='stylesheet' type='text/css'>";
+            Result += "<link href='"+GetPath(vLevel-1)+"Main.css' rel='stylesheet' type='text/css'>";
         }
         return Result;
     }
 
-    public String TitlePicture(int level)
+    public String TitlePicture(int vLevel)
     {
         String Result = "";
-        Result += "<img  id=\"idLogo\" src='"+GetPath(level)+"Pictures/logo_HouseThatKamuraiBuilt_blueonblack.jpg'><br>";
+        Result += "<img  id=\"idLogo\" src='"+GetPath(vLevel)+"Pictures/logo_HouseThatKamuraiBuilt_blueonblack.jpg'><br>";
 
         return Result;
     }
@@ -46,13 +46,13 @@ public class Universal
         return Result;
     }
 
-    public String NavBar(int level, int extension)
+    public String NavBar(int vLevel)
     {
         String Result = "";
-        Result += "<a class=\"navBar\" href='"+GetPath(level)+"index"+GetExtension(extension)+"'>Home</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(level)+"Section1/index"+GetExtension(extension)+"'>Web Programming</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(level)+"Section2/index"+GetExtension(extension)+"'>Private Projects</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(level)+"Section3/index"+GetExtension(extension)+"'>Downloadable Projects</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.xhtml'>Home</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.xhtml'>Web Programming</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.xhtml'>Private Projects</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.xhtml'>Downloadable Projects</a>";
         return Result;
     }
 
@@ -124,40 +124,6 @@ public class Universal
         else
         {
             return "./";
-        }
-    }
-
-    public String GetExtension(int extension)
-    {
-        if(extension <= 0)
-        {
-            //Basic HTML
-            return ".html";
-        }
-        else if(extension == 1)
-        {
-            //ASP
-            return ".asp";
-        }
-        else if(extension == 2)
-        {
-            //ASP.NET
-            return ".aspx";
-        }
-        else if(extension == 3)
-        {
-            //JSP
-            return ".jsp";
-        }
-        else if(extension == 4)
-        {
-            //JSP
-            return ".xhtml";
-        }
-        else
-        {
-            //Basic HTML
-            return ".html";
         }
     }
 }

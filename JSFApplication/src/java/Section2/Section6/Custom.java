@@ -4,36 +4,36 @@ import Section2.*;
 
 public class Custom extends Main.Custom
 {
-    Main.Universal bob;
+    Main.Universal universal;
 
     public Custom()
     {
-        bob = new Main.Universal();
+        universal = new Main.Universal();
     }
 
-    public String Content(int input)
+    public String Content(int vPage)
     {
         String Result = "";
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Content_Index.xhtml";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "./Content/Content_Project1.xhtml";
         }
         return Result;
     }
     
-    public String Versions(int input)
+    public String Versions(int vPage)
     {
         String Result = "";
        
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Versions_Index.xhtml";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "./Content/Versions_Project1.xhtml";
         }

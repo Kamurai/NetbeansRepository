@@ -2,39 +2,39 @@ package Main;
 
 public class Custom
 {
-    Universal bob;
+    Universal universal;
 
     public Custom()
     {
-        bob = new Universal();
+        universal = new Universal();
     }
 
-    public String Navigation(int level, int extension)
+    public String Navigation(int vLevel)
     {
         String Result = "";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"AboutUs.jsp'>About Us</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Media.jsp'>Media</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Minecraft.jsp'>Minecraft!</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"AboutUs.jsp'>About Us</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Media.jsp'>Media</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Minecraft.jsp'>Minecraft!</a><br/><br/>";
         return Result;
     }
 
-    public String Title(int input)
+    public String Title(int vPage)
     {
         String Result = "";
         Result += "<title>";
-            if(input == 0)
+            if(vPage == 0)
             {
                 Result += "HTKB Home Page";
             }
-            else if(input == 1)
+            else if(vPage == 1)
             {
                 Result += "About Us";
             }
-            else if(input == 2)
+            else if(vPage == 2)
             {
                 Result += "Media";
             }
-            else if(input == 3)
+            else if(vPage == 3)
             {
                 Result += "Minecraft!";
             }
@@ -42,23 +42,23 @@ public class Custom
         return Result;
     }
 
-    public String Header(int input)
+    public String Header(int vPage)
     {
         String Result = "";
         Result += "<h2>";
-            if(input == 0)
+            if(vPage == 0)
             {
                 Result += "Welcome to the House That Kamurai Built!";
             }
-            else if(input == 1)
+            else if(vPage == 1)
             {
                 Result += "About Us";
             }
-            else if(input == 2)
+            else if(vPage == 2)
             {
                 Result += "Media";
             }
-            else if(input == 3)
+            else if(vPage == 3)
             {
                 Result += "Minecraft!";
             }
@@ -66,24 +66,24 @@ public class Custom
         return Result;
     }
 
-    public String Content(int input)
+    public String Content(int vPage)
     {
         String Result = "";
         Result += "<p id=\"idCenterContent\">";
-            if(input == 0)
+            if(vPage == 0)
             {
                 Result += "The House That Kamurai Built is an entertainment company with the primary focus ";
                 Result += "of increasing awesome by stimulating intelligent conversation and entertainment via discussion and ";
                 Result += "game design.<br>";
                 Result += "Increase the Awesome with us!<br>";
             }
-            else if(input == 1)
+            else if(vPage == 1)
             {
                 Result += "We are working to build this into a better place.</br>";
                 Result += "If you found this, then you must be at least (Awesome/2).</br>";
                 Result += "Stay tuned, right now it's all about laying foundation for the future.</br>";
             }
-            else if(input == 2)
+            else if(vPage == 2)
             {
                     Result += "You can find us at all these different places:</br>";
                 Result += "<br/>";
@@ -127,7 +127,7 @@ public class Custom
                     Result += "<a href='https://www.gplus.com/Members/Cris-Kamurai'>Kamurai's Google Plus.</a></br>";
                     Result += "<a href='http://www.yoyogames.com/users/Kamurai'>Kamurai's YoYo Games page:  See some of the games he's posted.</a></br>";
             }
-            else if(input == 3)
+            else if(vPage == 3)
             {
                     Result += "If you would like to play Minecraft with us, we have several different servers:</br>";
                     Result += "Mo Creatures Server: (1.7.10) htkb.dyndns.org:25565</br>";
@@ -174,16 +174,16 @@ public class Custom
         return Result;
     }
     
-    public String Versions(int input)
+    public String Versions(int vPage)
     {
         String Result = "";
-        if(input == 0)
+        if(vPage == 0)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Index.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Index.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Index.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Index.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Index.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Index.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Index.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Index.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Index\">Node JS</a><br/>";
@@ -196,13 +196,13 @@ public class Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Index\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Index\">Ruby on Rails</a><br/>";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "<a href=\"http://htkb.dyndns.org/AboutUs.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/AboutUs.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/AboutUs.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/AboutUs.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/AboutUs.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/AboutUs.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/AboutUs.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/AboutUs.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/AboutUs\">Node JS</a><br/>";
@@ -215,13 +215,13 @@ public class Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/AboutUs\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/AboutUs\">Ruby on Rails</a><br/>";
         }
-        else if(input == 2)
+        else if(vPage == 2)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Media.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Media.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Media.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Media.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Media.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Media.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Media.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Media.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Media\">Node JS</a><br/>";
@@ -234,13 +234,13 @@ public class Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Media\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Media\">Ruby on Rails</a><br/>";
         }
-        else if(input == 3)
+        else if(vPage == 3)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Minecraft.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Minecraft.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Minecraft.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Minecraft.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Minecraft.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Minecraft.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Minecraft.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Minecraft.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Minecraft\">Node JS</a><br/>";

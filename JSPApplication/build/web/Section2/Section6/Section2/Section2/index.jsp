@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Dec 15, 2014, 5:03:20 PM
-    Author     : Kamurai
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Main.Universal" %>
 <%@page import="Section2.Layout" %>
@@ -17,16 +11,15 @@
             Universal uni = new Universal();
             Custom cust = new Custom();
             Layout lay = new Layout(cust);
-            int level = 4;
-            int pagenumber = 0;
-            int extension = 3;
-
-            out.println(uni.WriteHeader(level, 2));
+            int vLevel = 4;
+            int vPage = 0;
+            
+            out.println(uni.WriteHeader(vLevel, 2));
         %>
     </head>
     <body>
         <%
-            out.println(lay.WriteWebpage(pagenumber,level,extension));
+            out.println(lay.WriteWebpage(vPage, vLevel));
         %>
     </body>
 </html>

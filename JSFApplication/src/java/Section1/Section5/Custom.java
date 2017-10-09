@@ -11,10 +11,10 @@ public class Custom extends Main.Custom
         bob = new Main.Universal();
     }
 
-    public String Content(int input)
+    public String Content(int vPage)
     {
         String Result = "";
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Content_Index.xhtml";
         }
@@ -22,12 +22,12 @@ public class Custom extends Main.Custom
         return Result;
     }
     
-    public String Versions(int input)
+    public String Versions(int vPage)
     {
         String Result = "";
         
         
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Versions_Index.xhtml";
         }

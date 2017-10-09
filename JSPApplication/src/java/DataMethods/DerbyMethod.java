@@ -52,7 +52,7 @@ public class DerbyMethod
         
         if(col <= 0)
         {
-            sqlStatement += "index ";
+            sqlStatement += "Index ";
         }
         else
         {
@@ -63,7 +63,7 @@ public class DerbyMethod
         
         if(col <= 0)
         {
-            sqlStatement += "index ";
+            sqlStatement += "Index ";
             sqlStatement += "= " + rowID;
         }
         else

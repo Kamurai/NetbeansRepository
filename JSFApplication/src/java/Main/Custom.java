@@ -2,10 +2,6 @@ package Main;
 
 public class Custom
 {
-    int level;
-    int page;
-    int extension;
-
     Universal bob;
 
     public Custom()
@@ -14,23 +10,23 @@ public class Custom
         bob = new Universal();
     }
 
-    public String Content(int input)
+    public String Content(int vPage)
     {
         String Result = "";
         
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Content_Index.xhtml";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "./Content/Content_AboutUs.xhtml";
         }
-        else if(input == 2)
+        else if(vPage == 2)
         {
             Result += "./Content/Content_Media.xhtml";
         }
-        else if(input == 3)
+        else if(vPage == 3)
         {
             Result += "./Content/Content_Minecraft.xhtml";
         }
@@ -38,24 +34,24 @@ public class Custom
         return Result;
     }
     
-    public String Versions(int input)
+    public String Versions(int vPage)
     {
         String Result = "";
         
         
-        if(input <= 0)
+        if(vPage <= 0)
         {
             Result += "./Content/Versions_Index.xhtml";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "./Content/Versions_AboutUs.xhtml";
         }
-        else if(input == 2)
+        else if(vPage == 2)
         {
             Result += "./Content/Versions_Media.xhtml";
         }
-        else if(input == 3)
+        else if(vPage == 3)
         {
             Result += "./Content/Versions_Minecraft.xhtml";
         }

@@ -5,7 +5,7 @@ import DataMethods.*;
 
 public class Custom extends Section1.Custom
 {
-    Universal bob;
+    Universal universal;
     
     DerbyMethod dMethod;
     MySQLMethod mMethod;
@@ -16,7 +16,7 @@ public class Custom extends Section1.Custom
 
     public Custom()
     {
-        bob = new Universal();
+        universal = new Universal();
     
         dMethod = new DerbyMethod();
         mMethod = new MySQLMethod();
@@ -26,50 +26,50 @@ public class Custom extends Section1.Custom
         sMethod = new SQLServerMethod();
     }
 
-    public String Navigation(int level, int extension)
+    public String Navigation(int vLevel)
     {
         String Result = "";
         Result += "<a class=\"navlinkA\" href='http://htkb.dyndns.org/Section1/Index.html'>Basic HTML</a><br/><br/>";
         Result += "<a class=\"navlinkA\" href='http://htkb.dyndns.org/Section1/Index.php'>PHP</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section1/Section2/Index.jsp'>Javascript</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Section1/Section2/Index.jsp'>Javascript</a><br/><br/>";
         Result += "<a class=\"navlinkA\" href='http://htkb.dyndns.org/Section1/Index.shtml'>Perl</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section1/Section4/Index.jsp'>Java</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section1/Section5/Index.jsp'>ASP.Net</a><br/><br/>";
-        Result += "<a class=\"navlinkA\" href='"+bob.GetPath(level)+"Section1/Section6/Index.jsp'>Databases</a><br/><br/>";
-            Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section1/Section6/Project1.jsp'>Oracle</a><br/><br/>";
-            Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section1/Section6/Project2.jsp'>Derby</a><br/><br/>";
-            Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section1/Section6/Project3.jsp'>MySQL</a><br/><br/>";
-            Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section1/Section6/Project4.jsp'>SQL Server</a><br/><br/>";
-            Result += "<a class=\"navlinkB\" href='"+bob.GetPath(level)+"Section1/Section6/Project5.jsp'>Postgres</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Section1/Section4/Index.jsp'>Java</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Section1/Section5/Index.jsp'>ASP.Net</a><br/><br/>";
+        Result += "<a class=\"navlinkA\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Index.jsp'>Databases</a><br/><br/>";
+            Result += "<a class=\"navlinkB\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Project1.jsp'>Oracle</a><br/><br/>";
+            Result += "<a class=\"navlinkB\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Project2.jsp'>Derby</a><br/><br/>";
+            Result += "<a class=\"navlinkB\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Project3.jsp'>MySQL</a><br/><br/>";
+            Result += "<a class=\"navlinkB\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Project4.jsp'>SQL Server</a><br/><br/>";
+            Result += "<a class=\"navlinkB\" href='"+universal.GetPath(vLevel)+"Section1/Section6/Project5.jsp'>Postgres</a><br/><br/>";
         Result += "<a class=\"navlinkA\" href=\"http://htkb.dyndns.org/SSI/Section1/Index.html\">Apache SSI</a><br/><br/>";
         return Result;
     }
 
-    public String Title(int input)
+    public String Title(int vPage)
     {
         String Result = "";
         Result += "<title>";
-            if(input == 0)
+            if(vPage == 0)
             {
                 Result += "Database Programming";
             }
-            else if(input == 1)
+            else if(vPage == 1)
             {
                 Result += "Oracle Programming";
             }
-            else if(input == 2)
+            else if(vPage == 2)
             {
                 Result += "Derby Programming";
             }
-            else if(input == 3)
+            else if(vPage == 3)
             {
                 Result += "MySQL Programming";
             }
-            else if(input == 4)
+            else if(vPage == 4)
             {
                 Result += "SQL Server Programming";
             }
-            else if(input == 5)
+            else if(vPage == 5)
             {
                 Result += "Postgres Programming";
             }
@@ -78,31 +78,31 @@ public class Custom extends Section1.Custom
         return Result;
     }
 
-    public String Header(int input)
+    public String Header(int vPage)
     {
         String Result = "";
         Result += "<h2>";
-        if(input == 0)
+        if(vPage == 0)
         {
             Result += "Database Programming";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "Oracle Programming";
         }
-        else if(input == 2)
+        else if(vPage == 2)
         {
             Result += "Derby Programming";
         }
-        else if(input == 3)
+        else if(vPage == 3)
         {
             Result += "MySQL Programming";
         }
-        else if(input == 4)
+        else if(vPage == 4)
         {
             Result += "SQL Server Programming";
         }
-        else if(input == 5)
+        else if(vPage == 5)
         {
             Result += "Postgres Programming";
         }
@@ -111,15 +111,15 @@ public class Custom extends Section1.Custom
         return Result;
     }
 
-    public String Content(int input)
+    public String Content(int vPage)
     {
         String Result = "";
         Result += "<p id=\"idCenterContent\">";
-            if(input == 0)
+            if(vPage == 0)
             {
                 Result += "This section is dedicated to database based programming.";
             }
-            else if(input == 1)
+            else if(vPage == 1)
             {
                 Result += "This section is dedicated to Oracle based programming.";
                 Result += "<table>";
@@ -197,7 +197,7 @@ public class Custom extends Section1.Custom
                     Result += "</tr>";
                 Result += "</table>";
             }
-            else if(input == 2)
+            else if(vPage == 2)
             {
                 Result += "This section is dedicated to Derby based programming.";
                 Result += "<table>";
@@ -276,7 +276,7 @@ public class Custom extends Section1.Custom
                     
                 Result += "</table>";
             }
-            else if(input == 3)
+            else if(vPage == 3)
             {
                 Result += "This section is dedicated to MySQL based programming.";
                 Result += "<table>";
@@ -354,7 +354,7 @@ public class Custom extends Section1.Custom
                     
                 Result += "</table>";
             }
-            else if(input == 4)
+            else if(vPage == 4)
             {
                 Result += "This section is dedicated to SQL Server based programming.";
                 Result += "<table>";
@@ -522,7 +522,7 @@ public class Custom extends Section1.Custom
                     
                 Result += "</table>";
             }
-            else if(input == 5)
+            else if(vPage == 5)
             {
                 Result += "This section is dedicated to Postgres based programming.";
                 Result += "<table>";
@@ -606,16 +606,16 @@ public class Custom extends Section1.Custom
         return Result;
     }
     
-    public String Versions(int input)
+    public String Versions(int vPage)
     {
         String Result = "";
-        if(input == 0)
+        if(vPage == 0)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Index.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Index.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Index.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Index.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Index.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Index.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Index.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Index.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Index\">Node JS</a><br/>";
@@ -628,13 +628,13 @@ public class Custom extends Section1.Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Section1/Section6/Index\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Section1/Section6/Index\">Ruby on Rails</a><br/>";
         }
-        else if(input == 1)
+        else if(vPage == 1)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project1.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project1.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Project1.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Project1.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project1.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project1.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Project1.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Project1.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Project1\">Node JS</a><br/>";
@@ -647,13 +647,13 @@ public class Custom extends Section1.Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Section1/Section6/Project1\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Section1/Section6/Project1\">Ruby on Rails</a><br/>";
         }
-        else if(input == 2)
+        else if(vPage == 2)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project2.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project2.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Project2.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Project2.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project2.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project2.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Project2.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Project2.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Project2\">Node JS</a><br/>";
@@ -666,13 +666,13 @@ public class Custom extends Section1.Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Section1/Section6/Project2\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Section1/Section6/Project2\">Ruby on Rails</a><br/>";
         }
-        else if(input == 3)
+        else if(vPage == 3)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project3.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project3.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Project3.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Project3.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project3.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project3.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Project3.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Project3.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Project3\">Node JS</a><br/>";
@@ -685,13 +685,13 @@ public class Custom extends Section1.Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Section1/Section6/Project3\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Section1/Section6/Project3\">Ruby on Rails</a><br/>";
         }
-        else if(input == 4)
+        else if(vPage == 4)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project4.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project4.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Project4.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Project4.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project4.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project4.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Project4.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Project4.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Project4\">Node JS</a><br/>";
@@ -704,13 +704,13 @@ public class Custom extends Section1.Custom
             Result += "<a href=\"http://htkb.dyndns.org:82/Section1/Section6/Project4\">Python Web.py</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:83/Section1/Section6/Project4\">Ruby on Rails</a><br/>";
         }
-        else if(input == 5)
+        else if(vPage == 5)
         {
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project5.html\">HTML</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Section1/Section6/Project5.php\">PHP</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/Javascript/Section1/Section6/Project5.html\">HTML Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org/JQuery/Section1/Section6/Project5.html\">JQuery</a><br/>";
-            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project5.asp\">ASP Javascript</a><br/>";
+            Result += "<a href=\"http://htkb.dyndns.org:81/ASP/Section1/Section6/Project5.asp\">ASP VBscript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/ASPNET/Section1/Section6/Project5.aspx\">ASP.NET Javascript</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:81/WebForm/Section1/Section6/Project5.aspx\">ASP.NET Webform</a><br/>";
             Result += "<a href=\"http://htkb.dyndns.org:84/Section1/Section6/Project5\">Node JS</a><br/>";

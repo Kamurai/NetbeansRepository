@@ -10,16 +10,15 @@
             Universal uni = new Universal();
             Custom cust = new Custom();
             Layout lay = new Layout(cust);
-            int level = 1;
-            int pagenumber = 0;
-            int extension = 3;
-
-            out.println(uni.WriteHeader(level, 3));
+            int vLevel = 1;
+            int vPage = 0;
+            
+            out.println(uni.WriteHeader(vLevel, 3));
         %>
     </head>
     <body>
         <%
-            out.println(lay.WriteWebpage(pagenumber,level,extension));
+            out.println(lay.WriteWebpage(vPage, vLevel));
         %>
     </body>
 </html>
