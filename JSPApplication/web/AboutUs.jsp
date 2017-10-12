@@ -7,17 +7,17 @@
 <html>
     <head>
         <%
-            Universal uni = new Universal();
-            Custom cust = new Custom();
-            Layout lay = new Layout(cust);
-            int level = 0;
-            int pagenumber = 1;
-            int extension = 3;
+            Universal universal = new Universal();
+            Custom custom = new Custom();
+            Layout layout = new Layout(custom);
+            int vLevel = 0;
+            int vPage = 1;
+            
 
-            out.println(uni.WriteHeader(level, 0));
+            out.println(universal.WriteHeader(vLevel, 0));
         %>
     </head>
         <%
-            out.println(lay.WriteWebpage(pagenumber,level,extension));
+            out.println(layout.WriteWebpage(vPage,vLevel));
         %>
 </html>

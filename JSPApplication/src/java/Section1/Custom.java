@@ -6,7 +6,7 @@ public class Custom extends Main.Custom
 
     public Custom()
     {
-        universal = new Main.Universal();
+        this.universal = new Main.Universal();
     }
 
     public String Navigation(int vLevel)

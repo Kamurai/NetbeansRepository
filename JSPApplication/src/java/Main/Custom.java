@@ -6,7 +6,7 @@ public class Custom
 
     public Custom()
     {
-        universal = new Universal();
+        this.universal = new Universal();
     }
 
     public String Navigation(int vLevel)

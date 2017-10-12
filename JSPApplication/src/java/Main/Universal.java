@@ -49,10 +49,10 @@ public class Universal
     public String NavBar(int vLevel)
     {
         String Result = "";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.xhtml'>Home</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.xhtml'>Web Programming</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.xhtml'>Private Projects</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.xhtml'>Downloadable Projects</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.jsp'>Home</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
+        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
         return Result;
     }
 
@@ -87,37 +87,37 @@ public class Universal
     }
 
 
-    public String GetPath(int level)
+    public String GetPath(int vLevel)
     {
-        if(level <= 0)
+        if(vLevel <= 0)
         {
             return "./";
         }
-        else if(level == 1)
+        else if(vLevel == 1)
         {
             return "../";
         }
-        else if(level == 2)
+        else if(vLevel == 2)
         {
             return "../../";
         }
-        else if(level == 3)
+        else if(vLevel == 3)
         {
             return "../../../";
         }
-        else if(level == 4)
+        else if(vLevel == 4)
         {
             return "../../../../";
         }
-        else if(level == 5)
+        else if(vLevel == 5)
         {
             return "../../../../../";
         }
-        else if(level == 6)
+        else if(vLevel == 6)
         {
             return "../../../../../../";
         }
-        else if(level == 7)
+        else if(vLevel == 7)
         {
             return "../../../../../../../";
         }

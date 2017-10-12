@@ -2,11 +2,9 @@ package Section3;
 
 public class Custom extends Main.Custom
 {
-    Main.Universal universal;
-
     public Custom()
     {
-        universal = new Main.Universal();
+        super();
     }
 
     public String Content(int vPage)

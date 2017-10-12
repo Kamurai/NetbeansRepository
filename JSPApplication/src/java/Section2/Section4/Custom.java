@@ -8,7 +8,7 @@ public class Custom extends Section2.Custom
 
     public Custom()
     {
-        universal = new Main.Universal();
+        this.universal = new Main.Universal();
     }
 
     public String Navigation(int vLevel)

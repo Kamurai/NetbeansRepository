@@ -5,84 +5,73 @@
 
 package Section1.Section4;
 
-import Section1.Section2.*;
-import Section1.*;
 import Main.*;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
 
 @ManagedBean(name="Bean1_4")
 @RequestScoped
 public class Bean1_4
 {
-    int level;
-    int page;
-    int extension;
-
-    Custom    cust;
-    Main.Universal uni;
+    int vLevel;
+    int vPage;
+    
+    Custom    vCustom;
+    Universal vUniversal;
 
     public Bean1_4()
     {
-        //level = 0;
-        //page = 0;
-        extension = 4;
-
-        cust = new Custom();
-        uni = new Universal();
+        vLevel = 0;
+        vPage = 0;
+        
+        vCustom = new Custom();
+        vUniversal = new Universal();
     }
 
-   public void setLevel(int lvl)
+   public void setVLevel(int vLevel)
     {
-        level = lvl;
+        this.vLevel = vLevel;
     }
 
-    public void setPage(int pg)
+    public void setVPage(int vPage)
     {
-        page = pg;
+        this.vPage = vPage;
     }
 
-    public int getPage()
+    public int getVPage()
     {
-        return page;
+        return vPage;
     }
 
     public String GetPath()
     {
-        return uni.GetPath(level);
+        return vUniversal.GetPath(vLevel);
     }
 
     public String GetStylePath()
     {
-        return uni.GetPath(level-1);
-    }
-
-    public String GetExtension()
-    {
-        return uni.GetExtension(extension);
+        return vUniversal.GetPath(vLevel-1);
     }
 
     public String Content()
     {
-        return cust.Content(getPage());
+        return vCustom.Content(getVPage());
     }
 
     public String WebMaster()
     {
-        return uni.WebMaster();
+        return vUniversal.WebMaster();
     }
 
     public String Information()
     {
-        return uni.Information();
+        return vUniversal.Information();
     }
 
-    public String setLayout(int lvl, int pg)
+    public String setLayout(int vLevel, int vPage)
     {
-        setLevel(lvl);
-        setPage(pg);
+        setVLevel(vLevel);
+        setVPage(vPage);
 
         return GetPath()+"Section1/Section4/Layout.xhtml";
     }

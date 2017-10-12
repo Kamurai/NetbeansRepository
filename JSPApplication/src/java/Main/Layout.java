@@ -2,29 +2,28 @@ package Main;
 
 public class Layout
 {
-    Universal bob;
-    Custom joe;
+    Universal universal;
+    Custom custom;
 
-    public Layout(Custom CustomJoe)
+    public Layout(Custom custom)
     {
-        bob = new Universal();
-        joe = CustomJoe;
+        this.universal = new Universal();
+        this.custom = custom;
     }
 
-    public String WriteWebpage(int input, int level, int extension)
+    public String WriteWebpage(int vPage, int vLevel)
     {
         String Result = "";
         Result += "<body id=\"idBody\">";
-        Result += "<font color=\"white\">";
             Result += "<table id=\"idTableMain\">";
                 Result += "<tr id=\"idHeaderRow\">";
                     Result += "<td id=\"idHeaderRowCenter\" colspan=\"3\">";
-                        Result += bob.TitlePicture(level);
+                        Result += universal.TitlePicture(vLevel);
                     Result += "</td>";
                 Result += "</tr>";
                 Result += "<tr id=\"idNavigationRow\">";
                     Result += "<td id=\"idNavigationBar\" colspan=\"3\">";
-                        Result += bob.NavBar(level, extension);
+                        Result += universal.NavBar(vLevel);
                     Result += "</td>";
                 Result += "</tr>";
                 Result += "<tr id=\"idCenterRow\">";
@@ -32,33 +31,32 @@ public class Layout
                         Result += "<h4>";
                             Result += "Navigation";
                         Result += "</h4>";
-                        Result += joe.Navigation(level, extension);
+                        Result += custom.Navigation(vLevel);
                     Result += "</td>";
                     Result += "<td id=\"idCenterRowMain\">";
-                        Result += joe.Title(input);
-                        Result += joe.Header(input);
-                        Result += joe.Content(input);
+                        Result += custom.Title(vPage);
+                        Result += custom.Header(vPage);
+                        Result += custom.Content(vPage);
                     Result += "</td>";
                     Result += "<td id=\"idCenterRowRight\">";
                         Result += "<h4>";
                             Result += "Information";
                         Result += "</h4>";
-                        Result += bob.Information();
-                        Result += joe.Versions(input);
+                        Result += universal.Information();
+                        Result += custom.Versions(vPage);
                     Result += "</td>";
                 Result += "</tr>";
                 Result += "<tr id=\"idFooterRow\">";
                     Result += "<td id=\"idFooterMain\" colspan=\"3\">";
                             Result += "<p id=\"idFooterContent\">";
-                                Result += bob.Footer();
+                                Result += universal.Footer();
                             Result += "</p>";
                             Result += "<p id=\"idFooterContent\">";
-                                    Result += bob.WebMaster();
+                                    Result += universal.WebMaster();
                             Result += "</p>";
                     Result += "</td>";
                 Result += "</tr>";
             Result += "</table>";
-        Result += "</font>";
         Result += "</body>";
         return Result;
     }

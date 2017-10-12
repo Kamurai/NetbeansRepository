@@ -1,9 +1,5 @@
 package DataMethods;
 
-//Kemerait, Christopher
-//Database Project: Bloodbowl Option
-//Database Panel
-
 import java.sql.*;
 import java.sql.DriverManager;
 

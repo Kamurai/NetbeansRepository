@@ -4,11 +4,9 @@ import Section1.*;
 
 public class Custom extends Main.Custom
 {
-    Main.Universal bob;
-
     public Custom()
     {
-        bob = new Main.Universal();
+        super();
     }
 
     public String Content(int vPage)

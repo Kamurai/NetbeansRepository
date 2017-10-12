@@ -122,7 +122,7 @@ public class Custom extends Section1.Custom
             else if(vPage == 1)
             {
                 Result += "This section is dedicated to Oracle based programming.";
-                Result += "<table>";
+                Result += "<table class=\"classTable\">";
                     Result += "<tr>";
                         Result += "<td>";
                             Result += "Index";
@@ -200,7 +200,7 @@ public class Custom extends Section1.Custom
             else if(vPage == 2)
             {
                 Result += "This section is dedicated to Derby based programming.";
-                Result += "<table>";
+                Result += "<table class=\"classTable\">";
                     Result += "<tr>";
                         Result += "<td>";
                             Result += "Index";
@@ -279,7 +279,7 @@ public class Custom extends Section1.Custom
             else if(vPage == 3)
             {
                 Result += "This section is dedicated to MySQL based programming.";
-                Result += "<table>";
+                Result += "<table class=\"classTable\">";                
                     Result += "<tr>";
                         Result += "<td>";
                             Result += "Index";
@@ -357,7 +357,7 @@ public class Custom extends Section1.Custom
             else if(vPage == 4)
             {
                 Result += "This section is dedicated to SQL Server based programming.";
-                Result += "<table>";
+                Result += "<table class=\"classTable\">";                
                     Result += "<tr>";
                         Result += "<td>";
                             Result += "SQL Server Instance";
@@ -525,7 +525,7 @@ public class Custom extends Section1.Custom
             else if(vPage == 5)
             {
                 Result += "This section is dedicated to Postgres based programming.";
-                Result += "<table>";
+                Result += "<table class=\"classTable\">";                
                     Result += "<tr>";
                         Result += "<td>";
                             Result += "Index";

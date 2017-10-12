@@ -1,14 +1,12 @@
 package Section1.Section4;
 
-import Section1.*;
+import Main.*;
 
 public class Custom extends Main.Custom
 {
-    Main.Universal bob;
-
     public Custom()
     {
-        bob = new Main.Universal();
+        super();
     }
 
     public String Content(int vPage)

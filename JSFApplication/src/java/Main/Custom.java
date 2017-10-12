@@ -2,12 +2,12 @@ package Main;
 
 public class Custom
 {
-    Universal bob;
+    protected Universal vUniversal;
 
     public Custom()
     {
         
-        bob = new Universal();
+        vUniversal = new Universal();
     }
 
     public String Content(int vPage)
