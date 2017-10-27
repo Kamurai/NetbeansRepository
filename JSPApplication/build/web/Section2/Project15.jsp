@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Main.Universal" %>
 <%@page import="Section2.Layout" %>
@@ -10,14 +8,13 @@
 <html>
     <head>
         <%
-            Universal universal = new Universal();
-            Custom custom = new Custom();
-            Layout layout = new Layout(custom);
+            Universal vUniversal = new Universal();
+            Custom vCustom = new Custom();
+            Layout layout = new Layout(vCustom);
             int vLevel = 1;
-            int vPage = 15;
-            
+            int vPage = 15;           
 
-            out.println(universal.WriteHeader(vLevel, 2));
+            out.println(vUniversal.WriteHeader(vLevel, 2));
         %>
     </head>
     <body>

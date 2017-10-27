@@ -8,13 +8,13 @@
 <html>
     <head>
         <%
-            Universal universal = new Universal();
-            Custom custom = new Custom();
-            Layout layout = new Layout(custom);
+            Universal vUniversal = new Universal();
+            Custom vCustom = new Custom();
+            Layout layout = new Layout(vCustom);
             int vLevel = 2;
             int vPage = 0;
             
-            out.println(universal.WriteHeader(vLevel, 2));
+            out.println(vUniversal.WriteHeader(vLevel, 2));
         %>
     </head>
     <body>

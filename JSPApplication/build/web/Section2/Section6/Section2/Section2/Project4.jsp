@@ -10,14 +10,14 @@
 <html>
     <head>
         <%
-            Universal universal = new Universal();
-            Custom custom = new Custom();
-            Layout layout = new Layout(custom);
+            Universal vUniversal = new Universal();
+            Custom vCustom = new Custom();
+            Layout layout = new Layout(vCustom);
             int vLevel = 4;
             int vPage = 4;
             
 
-            out.println(universal.WriteHeader(vLevel, 2));
+            out.println(vUniversal.WriteHeader(vLevel, 2));
         %>
     </head>
     <body>

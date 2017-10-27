@@ -9,81 +9,81 @@ public class Universal
 
     public String WriteHeader(int vLevel, int vSection)
     {
-        String Result = "";
-        Result += "<link rel='shortcut icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
-        Result += "<link rel='icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        String vResult = "";
+        vResult += "<link rel='shortcut icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        vResult += "<link rel='icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
         if(vSection == 1)
         {
-            Result += "<link href='"+GetPath(vLevel-1)+"Section1.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='"+GetPath(vLevel-1)+"Section1.css' rel='stylesheet' type='text/css'>";
         }
         else if(vSection == 2)
         {
-            Result += "<link href='"+GetPath(vLevel-1)+"Section2.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='"+GetPath(vLevel-1)+"Section2.css' rel='stylesheet' type='text/css'>";
         }
         else if(vSection == 3)
         {
-            Result += "<link href='"+GetPath(vLevel-1)+"Section3.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='"+GetPath(vLevel-1)+"Section3.css' rel='stylesheet' type='text/css'>";
         }
         else
         {
-            Result += "<link href='"+GetPath(vLevel-1)+"Main.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='"+GetPath(vLevel-1)+"Main.css' rel='stylesheet' type='text/css'>";
         }
-        return Result;
+        return vResult;
     }
 
     public String TitlePicture(int vLevel)
     {
-        String Result = "";
-        Result += "<img  id=\"idLogo\" src='"+GetPath(vLevel)+"Pictures/logo_HouseThatKamuraiBuilt_blueonblack.jpg'><br>";
+        String vResult = "";
+        vResult += "<img  id=\"idLogo\" src='"+GetPath(vLevel)+"Pictures/logo_HouseThatKamuraiBuilt_blueonblack.jpg'><br>";
 
-        return Result;
+        return vResult;
     }
 
     public String WebMaster()
     {
-        String Result = "";
-            Result += "Website managed by Kamurai.";
-        return Result;
+        String vResult = "";
+            vResult += "Website managed by Kamurai.";
+        return vResult;
     }
 
     public String NavBar(int vLevel)
     {
-        String Result = "";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.jsp'>Home</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
-        Result += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
-        return Result;
+        String vResult = "";
+        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.jsp'>Home</a>";
+        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
+        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
+        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
+        return vResult;
     }
 
     public String GDR()
     {
-        String Result = "";
-        Result += "<a href='http://htkb.dyndns.org/Section3/downloads/GDR.zip'>You can download my Games Development Report here.</a></br>";
-        return Result;
+        String vResult = "";
+        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/GDR.zip'>You can download my Games Development Report here.</a></br>";
+        return vResult;
     }
 
     public String WinRAR()
     {
-        String Result = "";
-        Result += "<a href='http://htkb.dyndns.org/Section3/downloads/wrar371.exe'>You may need WinRar to open zip files from this site.</a></br>";
-        return Result;
+        String vResult = "";
+        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/wrar371.exe'>You may need WinRar to open zip files from this site.</a></br>";
+        return vResult;
     }
 
     public String Footer()
     {
-        String Result = "";
-        Result += "© Copyright 2012 All rights reserved<br>";
-        Result += "House That Kamurai Built<br>";
-        return Result;
+        String vResult = "";
+        vResult += "© Copyright 2012 All rights reserved<br>";
+        vResult += "House That Kamurai Built<br>";
+        return vResult;
     }
 
     public String Information()
     {
-        String Result = "";
-        Result += "This is written using JSP.<br><br>";
-        Result += "Other versions of this page are here:<br>";
-        return Result;
+        String vResult = "";
+        vResult += "This is written using JSP.<br><br>";
+        vResult += "Other versions of this page are here:<br>";
+        return vResult;
     }
 
 
