@@ -14,19 +14,19 @@ public class Universal
         vResult += "<link rel='icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
         if(vSection == 1)
         {
-            vResult += "<link href='"+GetPath(vLevel-1)+"Section1.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='http://htkb.dyndns.org/Styles/Division1.css' rel='stylesheet' type='text/css'>";
         }
         else if(vSection == 2)
         {
-            vResult += "<link href='"+GetPath(vLevel-1)+"Section2.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='http://htkb.dyndns.org/Styles/Division2.css' rel='stylesheet' type='text/css'>";
         }
         else if(vSection == 3)
         {
-            vResult += "<link href='"+GetPath(vLevel-1)+"Section3.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='http://htkb.dyndns.org/Styles/Division3.css' rel='stylesheet' type='text/css'>";
         }
         else
         {
-            vResult += "<link href='"+GetPath(vLevel-1)+"Main.css' rel='stylesheet' type='text/css'>";
+            vResult += "<link href='http://htkb.dyndns.org/Styles/Main.css' rel='stylesheet' type='text/css'>";
         }
         return vResult;
     }
@@ -34,7 +34,7 @@ public class Universal
     public String TitlePicture(int vLevel)
     {
         String vResult = "";
-        vResult += "<img  id=\"idLogo\" src='"+GetPath(vLevel)+"Pictures/logo_HouseThatKamuraiBuilt_blueonblack.jpg'><br>";
+        vResult += "<img  id=\"idLogo\" src='http://htkb.dyndns.org/Pictures/logoHTKB.jpg'><br>";
 
         return vResult;
     }
