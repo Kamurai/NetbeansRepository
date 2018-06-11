@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Main.Universal" %>
-<%@page import="Section2.Layout" %>
-<%@page import="Section2.Section5.Section2.Custom" %>
+<%@page import="Division2.Layout" %>
+<%@page import="Division2.Section5.Section2.Custom" %>
 <!DOCTYPE HTML>
 
 <html>
