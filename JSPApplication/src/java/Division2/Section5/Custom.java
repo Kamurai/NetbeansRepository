@@ -67,7 +67,7 @@ public class Custom extends Division2.Custom
                 vDefault += "Revoultions: Post Wars:                  Tactical RPG, 4th story arc.</br>";
         vDefault += "<br/>";
         vDefault += "<br/>";
-                        vDefault += "Grendol:";
+                vDefault += "Grendol:";
         vDefault += "<br/>";
         vDefault += "<br/>";
                 vDefault += "Here are projects based in the Grendol universe:</br>";
@@ -91,7 +91,7 @@ public class Custom extends Division2.Custom
                 vDefault += "</br>";
                 vDefault += "Nine Card: Tactical card game.</br>";
         
-        vResult += "<p id=\"idCenterContent\">";
+        vResult += "<div id=\"idCenterContent\">";
             if(vPage == 0)
             {
                 vResult += vDefault;
@@ -100,7 +100,7 @@ public class Custom extends Division2.Custom
             {
                 vResult += vDefault;
             }
-        vResult += "</p>";
+        vResult += "</div>";
         return vResult;
     }
     

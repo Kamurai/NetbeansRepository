@@ -142,7 +142,7 @@ public class Custom extends Main.Custom
         
         vDefault = "This section is dedicated to HTKB projects.";
         
-        vResult += "<p id=\"idCenterContent\">";
+        vResult += "<div id=\"idCenterContent\">";
             if(vPage == 0)
             {
                 vResult += vDefault;
@@ -203,7 +203,7 @@ public class Custom extends Main.Custom
             {
                 vResult += vDefault;
             }
-        vResult += "</p>";
+        vResult += "</div>";
         return vResult;
     }
     

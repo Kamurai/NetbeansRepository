@@ -112,7 +112,7 @@ public class Custom extends Division1.Custom
         
         vDefault = "This section is dedicated to database based programming.";
         
-        vResult += "<p id=\"idCenterContent\">";
+        vResult += "<div id=\"idCenterContent\">";
             if(vPage == 0)
             {
                 vResult += vDefault;
@@ -604,7 +604,7 @@ public class Custom extends Division1.Custom
                 vResult += vDefault;
             }
 
-        vResult += "</p>";
+        vResult += "</div>";
         return vResult;
     }
     

@@ -55,34 +55,34 @@ public class Custom extends Main.Custom
         vDefault = "Downloadable Projects";
         
         vResult += "<h2>";
-        if(vPage == 0)
-        {
-            vResult += vDefault;
-        }
-        else if(vPage == 1)
-        {
-            vResult += "Online Experience Downloads";
-        }
-        else if(vPage == 2)
-        {
-            vResult += "Game Maker Downloads";
-        }
-        else if(vPage == 3)
-        {
-            vResult += "Java Downloads";
-        }
-        else if(vPage == 4)
-        {
-            vResult += "C# Downloads";
-        }
-        else if(vPage == 5)
-        {
-            vResult += "C++ Downloads";
-        }
-        else
-        {
-            vResult += vDefault;
-        }
+			if(vPage == 0)
+			{
+				vResult += vDefault;
+			}
+			else if(vPage == 1)
+			{
+				vResult += "Online Experience Downloads";
+			}
+			else if(vPage == 2)
+			{
+				vResult += "Game Maker Downloads";
+			}
+			else if(vPage == 3)
+			{
+				vResult += "Java Downloads";
+			}
+			else if(vPage == 4)
+			{
+				vResult += "C# Downloads";
+			}
+			else if(vPage == 5)
+			{
+				vResult += "C++ Downloads";
+			}
+			else
+			{
+				vResult += vDefault;
+			}
         vResult += "</h2>";
         return vResult;
     }
@@ -94,7 +94,7 @@ public class Custom extends Main.Custom
         
         vDefault = "This section is dedicated to downloadable projects.";
         
-        vResult += "<p id=\"idCenterContent\">";
+        vResult += "<div id=\"idCenterContent\">";
             if(vPage == 0)
             {
                 vResult += vDefault;
@@ -147,7 +147,7 @@ public class Custom extends Main.Custom
             {
                 vResult += vDefault;
             }
-        vResult += "</p>";
+        vResult += "</div>";
         return vResult;
     }
     

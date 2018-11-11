@@ -28,6 +28,7 @@ public class Universal
         {
             vResult += "<link href='http://htkb.dyndns.org/Styles/Main.css' rel='stylesheet' type='text/css'>";
         }
+		
         return vResult;
     }
 
@@ -42,47 +43,59 @@ public class Universal
     public String WebMaster()
     {
         String vResult = "";
-            vResult += "Website managed by Kamurai.";
+		
+        vResult += "Website managed by Kamurai.";
+		
         return vResult;
     }
 
     public String NavBar(int vLevel)
     {
         String vResult = "";
+		
         vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.jsp'>Home</a>";
         vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
         vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
         vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
-        return vResult;
+        
+		return vResult;
     }
 
     public String GDR()
     {
         String vResult = "";
+		
         vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/GDR.zip'>You can download my Games Development Report here.</a></br>";
-        return vResult;
+        
+		return vResult;
     }
 
     public String WinRAR()
     {
         String vResult = "";
+		
         vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/wrar371.exe'>You may need WinRar to open zip files from this site.</a></br>";
-        return vResult;
+        
+		return vResult;
     }
 
     public String Footer()
     {
         String vResult = "";
+		
         vResult += "© Copyright 2012 All rights reserved<br>";
         vResult += "House That Kamurai Built<br>";
+		
         return vResult;
     }
 
     public String Information()
     {
         String vResult = "";
+		
         vResult += "This is written using JSP.<br><br>";
         vResult += "Other versions of this page are here:<br>";
+		
         return vResult;
     }
 

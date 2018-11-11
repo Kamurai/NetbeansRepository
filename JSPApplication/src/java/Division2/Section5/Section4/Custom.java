@@ -29,7 +29,6 @@ public class Custom extends Division2.Section5.Custom
             {
                 vResult += vDefault;
             }
-            
         vResult += "</title>";
         return vResult;
     }
@@ -68,7 +67,7 @@ public class Custom extends Division2.Section5.Custom
         vDefault += "</br>";
         vDefault += "Nine Card: a Tactical card game played through the Elvia Empire.</br>";
         
-        vResult += "<p id=\"idCenterContent\">";
+        vResult += "<div id=\"idCenterContent\">";
             if(vPage == 0)
             {
                 vResult += vDefault;
@@ -81,8 +80,7 @@ public class Custom extends Division2.Section5.Custom
             {
                 vResult += vDefault;
             }
-            
-        vResult += "</p>";
+        vResult += "</div>";
         return vResult;
     }
     
