@@ -6,11 +6,10 @@ public class Custom
 
     public Custom()
     {
-        
         vUniversal = new Universal();
     }
 
-    public String Content(int vPage)
+    public String getContent(int vPage)
     {
         String Result = "";
         
@@ -34,10 +33,9 @@ public class Custom
         return Result;
     }
     
-    public String Versions(int vPage)
+    public String getVersions(int vPage)
     {
-        String Result = "";
-        
+        String Result = "";        
         
         if(vPage <= 0)
         {

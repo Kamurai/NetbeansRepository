@@ -7,7 +7,7 @@ public class Custom extends Main.Custom
         super();
     }
 
-    public String Content(int vPage)
+    public String getContent(int vPage)
     {
         String Result = "";
         if(vPage <= 0)
@@ -25,7 +25,7 @@ public class Custom extends Main.Custom
         return Result;
     }
     
-    public String Versions(int vPage)
+    public String getVersions(int vPage)
     {
         String Result = "";
        

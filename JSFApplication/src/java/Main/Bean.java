@@ -44,40 +44,35 @@ public class Bean
         return vPage;
     }
 
-    public String GetPath()
+    public String getPath()
     {
-        String temp = vUniversal.GetPath(vLevel);
+        String temp = vUniversal.getPath(vLevel);
         return temp;
     }
 
-    public String GetStylePath()
+    public String getStylePath()
     {
-        return vUniversal.GetPath(vLevel-1);
+        return vUniversal.getPath(vLevel-1);
     }
 
-    public String Content()
+    public String getContent()
     {
-        return vCustom.Content(getVPage());
+        return vCustom.getContent(getVPage());
     }
 
-    public String WebMaster()
+    public String getWebMaster()
     {
-        return vUniversal.WebMaster();
+        return vUniversal.getWebMaster();
     }
 
-    public String Information()
+    public String getInformation()
     {
-        return vUniversal.Information();
+        return vUniversal.getInformation();
     }
     
-    public String OtherVersions()
+    public String getVersions()
     {
-        return vUniversal.OtherVersions();
-    }
-    
-    public String Versions()
-    {
-        return vCustom.Versions(getVPage());
+        return vCustom.getVersions(getVPage());
     }
 
     public String setLayout(int vLevel, int vPage)
@@ -85,6 +80,6 @@ public class Bean
         setVLevel(vLevel);
         setVPage(vPage);
 
-        return GetPath()+"Layout.xhtml";
+        return getPath()+"Layout.xhtml";
     }
 }

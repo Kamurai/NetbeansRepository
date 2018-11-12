@@ -6,60 +6,62 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
-        <link href='#{MainBean.GetPath()}Pictures/favicon.ico' rel='shortcut icon' type='image/x-icon' />
-        <link href='#{MainBean.GetPath()}Pictures/favicon.ico' rel='icon'          type='image/x-icon' />
+        <link href='#{Bean2_1.getPath()}Pictures/favicon.ico' rel='shortcut icon' type='image/x-icon' />
+        <link href='#{Bean2_1.getPath()}Pictures/favicon.ico' rel='icon'          type='image/x-icon' />
         <link href='http://htkb.dyndns.org/Styles/Division2.css'    rel='stylesheet'    type='text/css' />
     </h:head>
-    <h:body id="idBody">
-    <font color="white">
-        <table id="idTableMain">
-            <tr id="idHeaderRow">
-                <td id="idHeaderRowCenter" colspan="3">
+    <h:body>
+        <div id="idGeneralLayout">
+            <Header id="idHeaderRow">
+                <div id="idHeaderRowCenter">
                     <h:form>
-                        <ui:include src="#{Bean2_1.GetPath()}Common/Logo.xhtml"></ui:include>
+                        <ui:include src="#{Bean2_1.getPath()}Common/Logo.xhtml"></ui:include>
                     </h:form>
-                </td>
-            </tr>
-            <tr id="idNavigationRow">
-                <td id="idNavigationBar" colspan="3">
+                </div>
+            </Header>
+            <Nav id="idNavigationRow">
+                <div id="idNavigationBar">
                     <h:form>
-                        <ui:include src="#{Bean2_1.GetPath()}Common/NavBar.xhtml"></ui:include>
+                        <ui:include src="#{Bean2_1.getPath()}Common/NavBar.xhtml"></ui:include>
                    </h:form>
-                </td>
-            </tr>
-            <tr id="idCenterRow">
-                <td id="idCenterRowLeft">
-                    <h4>
-                        Navigation
-                    </h4>
+                </div>
+            </Nav>
+            <div id="idCenterRow">
+                <div id="idCenterRowLeft">
                     <h:form>
-                        <ui:include src="#{Bean2_1.GetPath()}Division2/Section1/Navigation.xhtml"></ui:include>
+                       <ui:include src="#{Bean2_1.getNavigationHeader()}"></ui:include>
                     </h:form>
-                </td>
-                <td id="idCenterRowMain">
                     <h:form>
-                       <ui:include src="#{Bean2_1.Content()}"></ui:include>
+                        <ui:include src="#{Bean2_1.getPath()}Navigation.xhtml"></ui:include>
                     </h:form>
-                    <td id="idCenterRowRight">
-                        <h4>
-                            Information
-                        </h4>
-                        <h:form>
-                            <ui:include src="#{MainBean.Versions()}"></ui:include>
-                        </h:form>
-                    </td>
-                </td>
-            </tr>
-            <tr id="idFooterRow">
-                <td id="idFooterMain" colspan="3">
+                </div>
+                <div id="idCenterRowMain">
                     <h:form>
-                        <ui:include src="#{Bean2_1.GetPath()}Common/GDR.xhtml"></ui:include>
-                        <ui:include src="#{Bean2_1.GetPath()}Common/WinRAR.xhtml"></ui:include>
-                        <ui:include src="#{Bean2_1.GetPath()}Common/Footer.xhtml"></ui:include>
+                       <ui:include src="#{Bean2_1.getContent()}"></ui:include>
                     </h:form>
-                </td>
-            </tr>
-        </table>
+                </div>
+				<div id="idCenterRowRight">
+					<h:form>
+					   <ui:include src="#{Bean2_1.getInformationHeader()}"></ui:include>
+					</h:form>
+					<h:form>
+					   <ui:include src="#{Bean2_1.getInformation()}"></ui:include>
+					</h:form>
+					<h:form>
+						<ui:include src="#{Bean2_1.getVersions()}"></ui:include>
+					</h:form>
+				</div>
+            </div>
+            <Footer id="idFooterRow">
+                <div id="idFooterMain">
+                    <h:form>
+                        <ui:include src="#{Bean2_1.getPath()}Common/GDR.xhtml"></ui:include>
+                        <ui:include src="#{Bean2_1.getPath()}Common/WinRAR.xhtml"></ui:include>
+                        <ui:include src="#{Bean2_1.getPath()}Common/Footer.xhtml"></ui:include>
+                    </h:form>
+                </div>
+            </Footer>
+        </div>
     </font>    
     </h:body>
 </html>

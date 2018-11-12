@@ -7,11 +7,11 @@ public class Universal
 
     }
 
-    public String WriteHeader(int vLevel, int vSection)
+    public String writeHeader(int vLevel, int vSection)
     {
         String vResult = "";
-        vResult += "<link rel='shortcut icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
-        vResult += "<link rel='icon' href='"+GetPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        vResult += "<link rel='shortcut icon' href='"+getPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
+        vResult += "<link rel='icon' href='"+getPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
         if(vSection == 1)
         {
             vResult += "<link href='http://htkb.dyndns.org/Styles/Division1.css' rel='stylesheet' type='text/css'>";
@@ -32,7 +32,7 @@ public class Universal
         return vResult;
     }
 
-    public String TitlePicture(int vLevel)
+    public String getLogo(int vLevel)
     {
         String vResult = "";
         vResult += "<img  id=\"idLogo\" src='http://htkb.dyndns.org/Pictures/logoHTKB.jpg'><br>";
@@ -40,7 +40,7 @@ public class Universal
         return vResult;
     }
 
-    public String WebMaster()
+    public String getWebMaster()
     {
         String vResult = "";
 		
@@ -49,37 +49,51 @@ public class Universal
         return vResult;
     }
 
-    public String NavBar(int vLevel)
+    public String getNavBar(int vLevel)
     {
         String vResult = "";
 		
-        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Index.jsp'>Home</a>";
-        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
-        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
-        vResult += "<a class=\"navBar\" href='"+GetPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Index.jsp'>Home</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
         
 		return vResult;
     }
 
-    public String GDR()
+    public String getNavigationHeader()
+    {
+        String vResult = "";
+	
+        vResult += "<h4>";
+	vResult += "Navigation";
+	vResult += "</h4>";
+	
+	return vResult;
+    }
+
+    public String getInformationHeader()
+    {
+        String vResult = "";
+	
+        vResult += "<h4>";
+	vResult += "Information";
+	vResult += "</h4>";
+	
+	return vResult;
+    }
+
+    public String getInformation()
     {
         String vResult = "";
 		
-        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/GDR.zip'>You can download my Games Development Report here.</a></br>";
-        
-		return vResult;
-    }
-
-    public String WinRAR()
-    {
-        String vResult = "";
+        vResult += "This is written using JSP.<br><br>";
+        vResult += "Other versions of this page are here:<br>";
 		
-        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/wrar371.exe'>You may need WinRar to open zip files from this site.</a></br>";
-        
-		return vResult;
+        return vResult;
     }
-
-    public String Footer()
+    
+    public String getFooter()
     {
         String vResult = "";
 		
@@ -89,18 +103,25 @@ public class Universal
         return vResult;
     }
 
-    public String Information()
+    public String getGDR()
     {
         String vResult = "";
 		
-        vResult += "This is written using JSP.<br><br>";
-        vResult += "Other versions of this page are here:<br>";
-		
-        return vResult;
+        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/GDR.zip'>You can download my Games Development Report here.</a></br>";
+        
+		return vResult;
     }
 
-
-    public String GetPath(int vLevel)
+    public String getWinRAR()
+    {
+        String vResult = "";
+		
+        vResult += "<a href='http://htkb.dyndns.org/Section3/downloads/wrar371.exe'>You may need WinRar to open zip files from this site.</a></br>";
+        
+		return vResult;
+    }
+    
+    public String getPath(int vLevel)
     {
         if(vLevel <= 0)
         {

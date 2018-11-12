@@ -6,9 +6,9 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core">
     <h:head/>
     <h:body>
-        <p align="left">
-            #{MainBean.Information()}<br/><br/>
-            #{MainBean.OtherVersions()}<br/>
+        <div>
+            #{MainBean.getInformationHeader()}<br/><br/>
+            #{MainBean.getVersions()}<br/>
         <br/>
         <br/>
             <a href="http://htkb.dyndns.org/Division2/Section1/Index.html">HTML</a><br/>
@@ -28,7 +28,7 @@
             <a href="http://htkb.dyndns.org:82/Division2/Section1/Index">Python Web.py</a><br/>
             <a href="http://htkb.dyndns.org:83/Division2/Section1/Index">Ruby On Rails</a><br/>
             <a href="http://htkb.dyndns.org:84/Division2/Section1/Index">Node JS</a><br/>
-        </p>
+        </div>
     </h:body>
 </html>
 

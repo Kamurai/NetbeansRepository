@@ -7,33 +7,33 @@ public class Layout extends Main.Layout
         super(vCustom);
     }
 
-    public String Navigation(int vLevel)
+    public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project2.jsp'>Assault</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project3.jsp'>Mars</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section4/Index.jsp'>Renley</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Index.jsp'>Antarrea</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section1/Index.jsp'>Global</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section2/Index.jsp'>Grendol</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section2/Project1.jsp'>Land of the Orcish Empire: Age of Magic</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section2/Project2.jsp'>Coliseum: Arena</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section3/Index.jsp'>Utopia</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Section2/Section5/Section4/Index.jsp'>Elvia</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project6.jsp'>Truth</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project7.jsp'>Kingdoms</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project8.jsp'>Terminal World</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project10.jsp'>Battle Princesses</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project12.jsp'>The Way</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project13.jsp'>Conspiratorium</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section2/Project14.jsp'>Conversion</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project2.jsp'>Assault</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project3.jsp'>Mars</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section4/Index.jsp'>Renley</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Index.jsp'>Antarrea</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Index.jsp'>Global</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section2/Index.jsp'>Grendol</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section2/Project1.jsp'>Land of the Orcish Empire: Age of Magic</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section2/Project2.jsp'>Coliseum: Arena</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section3/Index.jsp'>Utopia</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section4/Index.jsp'>Elvia</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project6.jsp'>Truth</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project7.jsp'>Kingdoms</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project8.jsp'>Terminal World</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project10.jsp'>Battle Princesses</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project12.jsp'>The Way</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project13.jsp'>Conspiratorium</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project14.jsp'>Conversion</a><br/><br/>";
         return vResult;
     }
 
-    public String WriteWebpage(int vPage, int vLevel)
+    public String getBody(int vPage, int vLevel)
     {
         String vResult = "";
         

@@ -9,7 +9,7 @@ public class Custom extends Division2.Section5.Custom
         super();
     }
 
-    public String Title(int vPage)
+    public String getTitle(int vPage)
     {
         String vResult = "";        
         String vDefault = "";
@@ -33,7 +33,7 @@ public class Custom extends Division2.Section5.Custom
         return vResult;
     }
 
-    public String Header(int vPage)
+    public String getContentHeader(int vPage)
     {
         String vResult = "";        
         String vDefault = "";
@@ -58,7 +58,7 @@ public class Custom extends Division2.Section5.Custom
         return vResult;
     }
 
-    public String Content(int vPage)
+    public String getContent(int vPage)
     {
         String vResult = "";
         String vDefault = "";
@@ -84,7 +84,7 @@ public class Custom extends Division2.Section5.Custom
         return vResult;
     }
     
-    public String Versions(int vPage)
+    public String getVersions(int vPage)
     {
         String vResult = "";
         String vDefault = "";

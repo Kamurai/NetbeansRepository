@@ -9,14 +9,14 @@ public class Layout extends Main.Layout
         super(vCustom);
     }
 
-    public String Navigation(int vLevel)
+    public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Index.jsp'>Databases</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Index.jsp'>Databases</a><br/><br/>";
         return vResult;
     }
 
-    public String WriteWebpage(int vPage, int vLevel)
+    public String getBody(int vPage, int vLevel)
     {
         String vResult = "";
 		

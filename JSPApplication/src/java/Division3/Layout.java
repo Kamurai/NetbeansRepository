@@ -7,18 +7,18 @@ public class Layout extends Main.Layout
         super(vCustom);
     }
 
-    public String Navigation(int vLevel)
+    public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section3/Project1.jsp'>Online Experience Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section3/Project2.jsp'>Game Maker Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section3/Project3.jsp'>Java Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section3/Project4.jsp'>C# Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Section3/Project5.jsp'>C++ Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project1.jsp'>Online Experience Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project2.jsp'>Game Maker Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project3.jsp'>Java Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project4.jsp'>C# Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project5.jsp'>C++ Downloads</a><br/><br/>";
         return vResult;
     }
 
-    public String WriteWebpage(int vPage, int vLevel)
+    public String getBody(int vPage, int vLevel)
     {
         String vResult = "";
 		

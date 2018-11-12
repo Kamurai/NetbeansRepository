@@ -45,27 +45,27 @@ public class Bean
 
     public String GetPath()
     {
-        return vUniversal.GetPath(vLevel);
+        return vUniversal.getPath(vLevel);
     }
 
     public String GetStylePath()
     {
-        return vUniversal.GetPath(vLevel-1);
+        return vUniversal.getPath(vLevel-1);
     }
 
-    public String Content()
+    public String getContent()
     {
-        return vCustom.Content(getVPage());
+        return vCustom.getContent(getVPage());
     }
 
     public String WebMaster()
     {
-        return vUniversal.WebMaster();
+        return vUniversal.getWebMaster();
     }
 
     public String Information()
     {
-        return vUniversal.Information();
+        return vUniversal.getInformation();
     }
 
     public String setLayout(int vLevel, int vPage)

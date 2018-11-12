@@ -9,19 +9,19 @@ public class Layout extends Main.Layout
         super(vCustom);
     }
 
-    public String Navigation(int vLevel)
+    public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Index.jsp'>Databases</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Project1.jsp'>Oracle</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Project2.jsp'>Derby</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Project3.jsp'>MySQL</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Project4.jsp'>SQL Server</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.GetPath(vLevel)+"Division1/Section1/Project5.jsp'>Postgres</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Index.jsp'>Databases</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Project1.jsp'>Oracle</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Project2.jsp'>Derby</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Project3.jsp'>MySQL</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Project4.jsp'>SQL Server</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Project5.jsp'>Postgres</a><br/><br/>";
         return vResult;
     }
 
-    public String WriteWebpage(int vPage, int vLevel)
+    public String getBody(int vPage, int vLevel)
     {
         String vResult = "";
 		

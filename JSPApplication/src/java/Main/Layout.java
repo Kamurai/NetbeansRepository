@@ -11,16 +11,16 @@ public class Layout
         this.vCustom = vCustom;
     }
 
-    public String Navigation(int vLevel)
+    public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"AboutUs.jsp'>About Us</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Media.jsp'>Media</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.GetPath(vLevel)+"Minecraft.jsp'>Minecraft!</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"AboutUs.jsp'>About Us</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Media.jsp'>Media</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Minecraft.jsp'>Minecraft!</a><br/><br/>";
         return vResult;
     }
 
-    public String WriteWebpage(int vPage, int vLevel)
+    public String getBody(int vPage, int vLevel)
     {
         String vResult = "";
 		
