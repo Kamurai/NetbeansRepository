@@ -11,7 +11,7 @@ import javax.faces.bean.RequestScoped;
 
 @ManagedBean(name="Bean1_1")
 @RequestScoped
-public class Bean1_1
+public class Bean
 {
     int vLevel;
     int vPage;
@@ -19,7 +19,7 @@ public class Bean1_1
     Custom    vCustom;
     Universal vUniversal;
 
-    public Bean1_1()
+    public Bean()
     {
         vLevel = 0;
         vPage = 0;
@@ -43,12 +43,12 @@ public class Bean1_1
         return vPage;
     }
 
-    public String GetPath()
+    public String getPath()
     {
         return vUniversal.getPath(vLevel);
     }
 
-    public String GetStylePath()
+    public String getStylePath()
     {
         return vUniversal.getPath(vLevel-1);
     }
@@ -58,14 +58,14 @@ public class Bean1_1
         return vCustom.getContent(getVPage());
     }
 
+    public String getVersions()
+    {
+        return vCustom.getVersions(getVPage());
+    }
+
     public String WebMaster()
     {
         return vUniversal.getWebMaster();
-    }
-
-    public String Information()
-    {
-        return vUniversal.getInformation();
     }
 
     public String setLayout(int vLevel, int vPage)
@@ -73,6 +73,6 @@ public class Bean1_1
         setVLevel(vLevel);
         setVPage(vPage);
 
-        return GetPath()+"Division1/Section1/Layout.xhtml";
+        return getPath()+"Division1/Section1/Layout.xhtml";
     }
 }

@@ -14,11 +14,11 @@
             int vPage = 3;
             
 
-            out.println(vUniversal.WriteHeader(vLevel, 0));
+            out.println(vUniversal.getHead(vLevel, 0));
         %>
     </head>
         <%
-            out.println(vLayout.WriteWebpage(vPage,vLevel));
+            out.println(vLayout.getBody(vPage,vLevel));
         %>
     
 </html>

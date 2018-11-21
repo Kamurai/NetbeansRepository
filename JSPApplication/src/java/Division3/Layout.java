@@ -10,11 +10,11 @@ public class Layout extends Main.Layout
     public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project1.jsp'>Online Experience Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project2.jsp'>Game Maker Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project3.jsp'>Java Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project4.jsp'>C# Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section3/Project5.jsp'>C++ Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project1.jsp'>Online Experience Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project2.jsp'>Game Maker Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project3.jsp'>Java Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project4.jsp'>C# Downloads</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project5.jsp'>C++ Downloads</a><br/><br/>";
         return vResult;
     }
 

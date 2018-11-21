@@ -43,12 +43,12 @@ public class Bean
         return vPage;
     }
 
-    public String GetPath()
+    public String getPath()
     {
         return vUniversal.getPath(vLevel);
     }
 
-    public String GetStylePath()
+    public String getStylePath()
     {
         return vUniversal.getPath(vLevel-1);
     }
@@ -58,14 +58,14 @@ public class Bean
         return vCustom.getContent(getVPage());
     }
 
+    public String getVersions()
+    {
+        return vCustom.getVersions(getVPage());
+    }
+
     public String WebMaster()
     {
         return vUniversal.getWebMaster();
-    }
-
-    public String Information()
-    {
-        return vUniversal.getInformation();
     }
 
     public String setLayout(int vLevel, int vPage)
@@ -73,6 +73,6 @@ public class Bean
         setVLevel(vLevel);
         setVPage(vPage);
 
-        return GetPath()+"Division2/Layout.xhtml";
+        return getPath()+"Division2/Layout.xhtml";
     }
 }

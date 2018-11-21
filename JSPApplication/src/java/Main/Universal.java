@@ -7,20 +7,20 @@ public class Universal
 
     }
 
-    public String writeHeader(int vLevel, int vSection)
+    public String getHead(int vLevel, int vDivision)
     {
         String vResult = "";
         vResult += "<link rel='shortcut icon' href='"+getPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
         vResult += "<link rel='icon' href='"+getPath(vLevel)+"Pictures/favicon.ico' type='image/x-icon' />";
-        if(vSection == 1)
+        if(vDivision == 1)
         {
             vResult += "<link href='http://htkb.dyndns.org/Styles/Division1.css' rel='stylesheet' type='text/css'>";
         }
-        else if(vSection == 2)
+        else if(vDivision == 2)
         {
             vResult += "<link href='http://htkb.dyndns.org/Styles/Division2.css' rel='stylesheet' type='text/css'>";
         }
-        else if(vSection == 3)
+        else if(vDivision == 3)
         {
             vResult += "<link href='http://htkb.dyndns.org/Styles/Division3.css' rel='stylesheet' type='text/css'>";
         }
@@ -54,9 +54,9 @@ public class Universal
         String vResult = "";
 		
         vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Index.jsp'>Home</a>";
-        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section1/Index.jsp'>Web Programming</a>";
-        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section2/Index.jsp'>Private Projects</a>";
-        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Section3/Index.jsp'>Downloadable Projects</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Division1/Index.jsp'>Web Programming</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Division2/Index.jsp'>Private Projects</a>";
+        vResult += "<a class=\"navBar\" href='"+getPath(vLevel)+"Division3/Index.jsp'>Downloadable Projects</a>";
         
 		return vResult;
     }

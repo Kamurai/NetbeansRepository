@@ -22,6 +22,10 @@ public class Custom extends Main.Custom
         {
             Result += "./Content/Content_Project3.xhtml";
         }
+        else if(vPage == 6)
+        {
+            Result += "./Content/Content_Project6.xhtml";
+        }
         else if(vPage == 7)
         {
             Result += "./Content/Content_Project7.xhtml";
@@ -54,10 +58,7 @@ public class Custom extends Main.Custom
         {
             Result += "./Content/Content_Project14.xhtml";
         }
-        else if(vPage == 15)
-        {
-            Result += "./Content/Content_Project15.xhtml";
-        }
+        
         return Result;
     }
     

@@ -10,30 +10,30 @@ public class Layout extends Main.Layout
     public String getNavigation(int vLevel)
     {
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project2.jsp'>Assault</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project3.jsp'>Mars</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section4/Index.jsp'>Renley</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Index.jsp'>Antarrea</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Index.jsp'>Global</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project1.jsp'>Team Tactial: Crash Ball</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project2.jsp'>Wars of Antarrea</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project3.jsp'>Revolutions: Invading Nations</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project4.jsp'>Revolutions: Rebellion Against the Fist</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project5.jsp'>Revolutions: Return to Arms</a><br/><br/>";
-                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section1/Project6.jsp'>Revolutions: Post Wars</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section2/Index.jsp'>Grendol</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section3/Index.jsp'>Utopia</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Section2/Section5/Section4/Index.jsp'>Elvia</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project6.jsp'>Truth</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project7.jsp'>Kingdoms</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project8.jsp'>Terminal World</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project10.jsp'>Battle Princesses</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project12.jsp'>The Way</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project13.jsp'>Conspiratorium</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Section2/Project14.jsp'>Conversion</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project2.jsp'>Assault</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project3.jsp'>Mars</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section4/Index.jsp'>Renley</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Index.jsp'>Antarrea</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Index.jsp'>Global</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project1.jsp'>Team Tactial: Crash Ball</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project2.jsp'>Wars of Antarrea</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project3.jsp'>Revolutions: Invading Nations</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project4.jsp'>Revolutions: Rebellion Against the Fist</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project5.jsp'>Revolutions: Return to Arms</a><br/><br/>";
+                vResult += "<a class=\"navlinkC\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section1/Project6.jsp'>Revolutions: Post Wars</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section2/Index.jsp'>Grendol</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section3/Index.jsp'>Utopia</a><br/><br/>";
+            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Section4/Index.jsp'>Elvia</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project6.jsp'>Truth</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project7.jsp'>Kingdoms</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project8.jsp'>Terminal World</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project10.jsp'>Battle Princesses</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project12.jsp'>The Way</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project13.jsp'>Conspiratorium</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project14.jsp'>Conversion</a><br/><br/>";
         return vResult;
     }
 

@@ -7,40 +7,12 @@ public class Universal
 
     }
     
-    public String getNavigationHeader()
-    {
-        String vResult = "";
-	
-        vResult += "<h4>";
-		vResult += "Navigation";
-		vResult += "</h4>";
-		
-		return vResult;
-}
-
-    public String getInformationHeader()
-    {
-        String vResult = "";
-	
-        vResult += "<h4>";
-		vResult += "Information";
-		vResult += "</h4>";
-		
-		return vResult;
-    }
-
-    public String getInformation()
-    {
-        String Result = "";
-        Result += "This page is written using JSF.";
-        Result += "Other versions of this page are here:";
-        return Result;
-    }
-
     public String getWebMaster()
     {
         String Result = "";
+        
         Result += "Website managed by Kamurai.";
+        
         return Result;
     }
 

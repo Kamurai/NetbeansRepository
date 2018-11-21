@@ -1,7 +1,6 @@
-sa<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Main.Universal" %>
-<%@page import="Division1.Section1.Custom" %>
-<%@page import="Division1.Layout" %>
+<%@page import="Division1.Section1.Layout" %>
 <%@page import="Division1.Section1.Custom" %>
 <!DOCTYPE HTML>
 
@@ -14,11 +13,11 @@ sa<%@page contentType="text/html" pageEncoding="UTF-8"%>
             int vLevel = 2;
             int vPage = 0;
             
-            out.println(vUniversal.WriteHeader(vLevel, 1));
+            out.println(vUniversal.getHead(vLevel, 1));
         %>
     </head>
         <%
-            out.println(vLayout.WriteWebpage(vPage, vLevel));
+            out.println(vLayout.getBody(vPage, vLevel));
         %>
     
 </html>

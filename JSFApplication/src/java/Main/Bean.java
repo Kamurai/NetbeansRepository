@@ -60,19 +60,14 @@ public class Bean
         return vCustom.getContent(getVPage());
     }
 
-    public String getWebMaster()
-    {
-        return vUniversal.getWebMaster();
-    }
-
-    public String getInformation()
-    {
-        return vUniversal.getInformation();
-    }
-    
     public String getVersions()
     {
         return vCustom.getVersions(getVPage());
+    }
+
+    public String getWebMaster()
+    {
+        return vUniversal.getWebMaster();
     }
 
     public String setLayout(int vLevel, int vPage)

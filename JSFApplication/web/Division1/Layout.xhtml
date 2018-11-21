@@ -27,12 +27,12 @@
                 </div>
             </Nav>
             <div id="idCenterRow">
-               <div id="idCenterRowLeft">
+                <div id="idCenterRowLeft">
                     <h:form>
-                       <ui:include src="#{Bean1.getNavigationHeader()}"></ui:include>
+                        <ui:include src="#{Bean1.getPath()}Common/NavigationHeader.xhtml"></ui:include>
                     </h:form>
                     <h:form>
-                        <ui:include src="#{Bean1.getPath()}Navigation.xhtml"></ui:include>
+                        <ui:include src="./Navigation.xhtml"></ui:include>
                     </h:form>
                 </div>
                 <div id="idCenterRowMain">
@@ -40,17 +40,17 @@
                        <ui:include src="#{Bean1.getContent()}"></ui:include>
                     </h:form>
                 </div>
-				<div id="idCenterRowRight">
-					<h:form>
-					   <ui:include src="#{Bean1.getInformationHeader()}"></ui:include>
-					</h:form>
-					<h:form>
-					   <ui:include src="#{Bean1.getInformation()}"></ui:include>
-					</h:form>
-					<h:form>
-						<ui:include src="#{Bean1.getVersions()}"></ui:include>
-					</h:form>
-				</div>
+                <div id="idCenterRowRight">
+                    <h:form>
+                        <ui:include src="#{Bean1.getPath()}Common/InformationHeader.xhtml"></ui:include>
+                    </h:form>
+                    <h:form>
+                        <ui:include src="#{Bean1.getPath()}Common/Information.xhtml"></ui:include>
+                    </h:form>
+                    <h:form>
+                        <ui:include src="#{Bean1.getVersions()}"></ui:include>
+                    </h:form>
+                </div>
             </div>
             <Footer id="idFooterRow">
                 <div id="idFooterMain">
@@ -60,7 +60,6 @@
                 </div>
             </Footer>
         </div>
-    </font>    
     </h:body>
 </html>
 
