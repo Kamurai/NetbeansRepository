@@ -7,9 +7,9 @@ public class Layout extends Main.Layout
         super(vCustom);
     }
 
-    public String getNavigation(int vLevel)
-    {
+    public String getNavigation(int vLevel){
         String vResult = "";
+        
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project2.jsp'>Assault</a><br/><br/>";
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project3.jsp'>Mars</a><br/><br/>";
@@ -29,6 +29,10 @@ public class Layout extends Main.Layout
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project12.jsp'>The Way</a><br/><br/>";
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project13.jsp'>Conspiratorium</a><br/><br/>";
         vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project14.jsp'>Conversion</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project15.jsp'>Conquer</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project16.jsp'>Armor Up!</a><br/><br/>";
+        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project17.jsp'>Goblins and Guardians</a><br/><br/>";
+        
         return vResult;
     }
 
