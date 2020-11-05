@@ -10,11 +10,11 @@
             Universal vUniversal = new Universal();
             Custom vCustom = new Custom();
             Layout vLayout = new Layout(vCustom);
-            int vLevel = 2;
             int vPage = 1;
-            
+            int vLevel = 2;
+            int vDivision = 2;
 
-            out.println(vUniversal.getHead(vLevel, 2));
+            out.println(vUniversal.getHead(vLevel, vDivision));
         %>
     </head>
         <%

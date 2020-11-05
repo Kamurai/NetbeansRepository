@@ -1,20 +1,24 @@
 package Division3;
 
-public class Layout extends Main.Layout
-{
-    public Layout(Custom vCustom)
-    {
+public class Layout extends Main.Layout{
+    public Layout(Custom vCustom){
         super(vCustom);
     }
 
-    public String getNavigation(int vLevel)
-    {
+    public String getNavigation(int vLevel){
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project1.jsp'>Online Experience Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project2.jsp'>Game Maker Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project3.jsp'>Java Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project4.jsp'>C# Downloads</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division3/Project5.jsp'>C++ Downloads</a><br/><br/>";
+        
+        vResult += "<ul class=\"navigationUl\">";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Index.jsp\">Video Games</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project1.jsp\">Truth</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project2.jsp\">The Wrong Ninja</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project3.jsp\">Gynowars</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project4.jsp\">Terminal World</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project5.jsp\">Mars: Opposition</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Section1/Index.jsp\">Antarrea</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Section2/Index.jsp\">Renley</a></li>";
+        vResult += "</ul>";
+        
         return vResult;
     }
 
@@ -59,6 +63,6 @@ public class Layout extends Main.Layout
             vResult += "</div>";
         vResult += "</body>";
         
-		return vResult;
+        return vResult;
     }
 }

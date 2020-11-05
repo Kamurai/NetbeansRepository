@@ -1,35 +1,22 @@
 package Division2.Section1;
 
-public class Layout extends Main.Layout
-{
-    public Layout(Custom vCustom)
-    {
+public class Layout extends Division2.Layout{
+    public Layout(Custom vCustom){
         super(vCustom);
     }
 
     public String getNavigation(int vLevel){
         String vResult = "";
         
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Index.jsp'>Gynowars</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Project1.jsp'>Gynowars RPG</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Project2.jsp'>Gynowars: Battle Arena CCG</a><br/><br/>";
-            vResult += "<a class=\"navlinkB\" href='"+vUniversal.getPath(vLevel)+"Division2/Section1/Project3.jsp'>Gynowars: Crash Ball</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project2.jsp'>Assault</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project3.jsp'>Mars</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section4/Index.jsp'>Renley</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Section5/Index.jsp'>Antarrea</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project6.jsp'>Truth</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project7.jsp'>Kingdoms</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project8.jsp'>Terminal World</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project9.jsp'>Monster Office Workplace</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project10.jsp'>Battle Princesses</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project11.jsp'>Sacred Offerings</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project12.jsp'>The Way</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project13.jsp'>Conspiratorium</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project14.jsp'>Conversion</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project15.jsp'>Conquer</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project16.jsp'>Armor Up!</a><br/><br/>";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division2/Project17.jsp'>Goblins and Guardians</a><br/><br/>";
+        vResult += "<ul class=\"navigationUl\">";
+            vResult += "<li><a class=\"navlinkA\" href=\"../Index.jsp\">Digital Board Games</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"../Project1.jsp\">Kingdoms</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"../Project2.jsp\">Goblins and Guardians</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"../Project3.jsp\">MegaFleets</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"../Section1/Index.jsp\">Crash Ball</a></li>";
+                vResult += "<li><a class=\"navlinkA\" href=\"./Project1.jsp\">Antarrea: Crash Ball</a></li>";
+                vResult += "<li><a class=\"navlinkA\" href=\"./Project2.jsp\">Gynowars: Crash Ball</a></li>";
+        vResult += "</ul>";
         
         return vResult;
     }

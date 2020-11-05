@@ -1,23 +1,39 @@
 package Division1;
 
-import Division1.Custom;
-
-public class Layout extends Main.Layout
-{
-    public Layout(Custom vCustom)
-    {
+public class Layout extends Main.Layout{
+    public Layout(Custom vCustom){
         super(vCustom);
     }
 
-    public String getNavigation(int vLevel)
-    {
+    public String getNavigation(int vLevel){
         String vResult = "";
-        vResult += "<a class=\"navlinkA\" href='"+vUniversal.getPath(vLevel)+"Division1/Section1/Index.jsp'>Databases</a><br/><br/>";
+        
+        vResult += "<ul class=\"navigationUl\">";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Index.jsp\">Board Games</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project1.jsp\">The Way</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project2.jsp\">Sacred Offerings</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project3.jsp\">Conversion</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project4.jsp\">Conspiratorium</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project5.jsp\">Monster Office Workplace</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project6.jsp\">MacCreedy's Mansion</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project7.jsp\">Dundered Acre Wood</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project8.jsp\">Conquer</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project9.jsp\">Assault</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project10.jsp\">Battle Princesses</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project11.jsp\">Armor Up</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project12.jsp\">Gynowars: Battle Arena</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project13.jsp\">Land of the Orcish Empire: Age of Magic</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project14.jsp\">Coliseum: Arena</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project15.jsp\">Nine Card</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project16.jsp\">Wars of Antarrea</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project17.jsp\">Antarrea RPG</a></li>";
+            vResult += "<li><a class=\"navlinkA\" href=\"./Project18.jsp\">Super Dungeon Adventure</a></li>";
+        vResult += "</ul>";
+        
         return vResult;
     }
 
-    public String getBody(int vPage, int vLevel)
-    {
+    public String getBody(int vPage, int vLevel){
         String vResult = "";
 		
         vResult += "<body>";

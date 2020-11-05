@@ -1,0 +1,23 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Main.Universal" %>
+<%@page import="Division4.Layout" %>
+<%@page import="Division4.Custom" %>
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <%
+            Universal vUniversal = new Universal();
+            Custom vCustom = new Custom();
+            Layout vLayout = new Layout(vCustom);
+            int vPage = 0;
+            int vLevel = 1;
+            int vDivision = 4;
+            
+            out.println(vUniversal.getHead(vLevel, vDivision));
+        %>
+    </head>
+        <%
+            out.println(vLayout.getBody(vPage,vLevel));
+        %>    
+</html>

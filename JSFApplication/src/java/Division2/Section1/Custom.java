@@ -7,51 +7,37 @@ public class Custom extends Main.Custom
         super();
     }
 
-    public String getContent(int vPage)
-    {
-        String Result = "";
-        if(vPage <= 0)
-        {
-            Result += "./Content/Content_Index.xhtml";
-        }
-        else if(vPage == 1)
-        {
-            Result += "./Content/Content_Project1.xhtml";
-        }
-        else if(vPage == 2)
-        {
-            Result += "./Content/Content_Project2.xhtml";
-        }
-        else if(vPage == 3)
-        {
-            Result += "./Content/Content_Project3.xhtml";
-        }
+    public String getContent(int vPage){
+        String vDefault = "./Content/Content_Index.xhtml";
+        String vResult = "";
         
-        return Result;
-    }
-    
-    public String getVersions(int vPage)
-    {
-        String Result = "";
-        
-        
-        if(vPage <= 0)
-        {
-            Result += "./Content/Versions_Index.xhtml";
-        }
-        else if(vPage == 1)
-        {
-            Result += "./Content/Versions_Project1.xhtml";
-        }
-        else if(vPage == 2)
-        {
-            Result += "./Content/Versions_Project2.xhtml";
-        }
-        else if(vPage == 3)
-        {
-            Result += "./Content/Versions_Project3.xhtml";
+        if(vPage <= 0){
+            vResult += vDefault;
+        }else if(vPage == 1){
+            vResult += "./Content/Content_Project1.xhtml";
+        }else if(vPage == 2){
+            vResult += "./Content/Content_Project2.xhtml";
+        }else{
+            vResult += vDefault;
         }
 
-        return Result;
+        return vResult;
+    }
+    
+    public String getVersions(int vPage){
+        String vDefault = "./Content/Versions_Index.xhtml";
+        String vResult = "";
+                
+        if(vPage <= 0){
+            vResult += vDefault;
+        }else if(vPage == 1){
+            vResult += "./Content/Versions_Project1.xhtml";
+        }else if(vPage == 2){
+            vResult += "./Content/Versions_Project2.xhtml";
+        }else{
+            vResult += vDefault;
+        }
+
+        return vResult;
     }
 }
