@@ -34,9 +34,9 @@ public class SQLServerBean
     {
         driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         //url = "jdbc:sqlserver://localhost:1433";
-        url = "jdbc:sqlserver://localhost\\SQLSERVER";
-        dbName = ";DatabaseName=TEST";
-        dbUsername = "SA";
+        url = "jdbc:sqlserver://localhost";
+        dbName = ";DatabaseName=Test";
+        dbUsername = "sa";
         dbPassword = "yellow23";
         connect = null;
 
@@ -58,23 +58,23 @@ public class SQLServerBean
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "ColorIndex ";
         }
         else
         {
             sqlStatement += "color ";
         }
 
-        sqlStatement += "from test where ";        
+        sqlStatement += "from Colors where ";        
         
         if(col <= 0)
         {
-            sqlStatement += "indext ";
+            sqlStatement += "ColorIndex ";
             sqlStatement += "= " + rowID;
         }
         else
         {
-            sqlStatement += "color ";
+            sqlStatement += "Color ";
             sqlStatement += "= '" + rowID + "'";
         }
 
